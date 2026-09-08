@@ -1,21 +1,21 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 40px;
-    background-color: #c0c0c0;
-    color: #8b0000;
+    background-color: #FFD23F;
+    color: #C8102E;
     line-height: 1.5;
 }
 
 h1,
 h2 {
     font-family: Georgia, serif;
-    color: #8b0000;
+    color: #C8102E;
     text-align: center;
 }
 
 h6 {
     font-family: Georgia, serif;
-    color: #8b0000;
+    color: #C8102E;
     font-size: 1.5rem;
     text-align: center;
     white-space: nowrap;
@@ -58,15 +58,15 @@ blockquote {
 }
 
 a {
-    color: #8b0000;
+    color: #C8102E;
 }
 
 a:visited {
-    color: #8b0000;
+    color: #C8102E;
 }
 
 a:hover {
-    color: #b22222;
+    color: #C8102E;
 }
 
 footer {
