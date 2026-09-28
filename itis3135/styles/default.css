@@ -1,9 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
     background-color: #FFD23F;
     color: #C8102E;
     line-height: 1.5;
+    max-width: 1200px;
+    margin: auto;
 }
 
 h1,
@@ -80,10 +81,12 @@ footer p {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 600px) {
     body {
-        margin: 20px;
+        max-width: 95%;
+        margin: auto;
     }
 }

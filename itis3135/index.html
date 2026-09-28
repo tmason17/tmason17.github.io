@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 40px;
             background-color: #FFD23F;
             color: #C8102E;
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
         }
 
         h1,
@@ -69,11 +72,19 @@
 
         @media (max-width: 600px) {
             body {
-                margin: 20px;
+                width: 95%;
+                margin: 0 auto;
             }
         }
     </style>
 
+    <!-- Vicunadator (llama) -->
+    <script
+        src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
+        defer>
+    </script>
+
+    <!-- Accumulus (cloud) - must be last item in head -->
     <script
         src="https://lint.page/kit/4d0fe3.js"
         crossorigin="anonymous">
@@ -82,26 +93,7 @@
 
 <body>
 
-    <header>
-        <h1>Tony Mason's Timeless Monkey | ITIS3135</h1>
-
-        <p><em>No clock. No limits. Just progress.</em></p>
-
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="contract.html">Contract</a> |
-            <a href="introduction.html">Introduction</a> |
-            <a href="about.html">About</a> |
-            <a href="survey.html">Survey</a> |
-            <a href="cards.html">Cards</a> |
-            <a href="inventory.html">Inventory</a> |
-            <a href="documentation.html">Documentation</a> |
-            <a href="product.html">Product</a> |
-            <a href="website_evaluations.html">CRAP Evaluations</a> |
-            <a href="images.html">Pictures</a> |
-            <a href="introduction_form.html">Introduction Form</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
         <h2>Home</h2>
@@ -122,30 +114,10 @@
         </figure>
     </main>
 
-   <footer>
-    <nav>
-        <a href="https://webpages.charlotte.edu/tmason17/">CLT Web</a> |
-        <a href="https://github.com/tmason17">GitHub</a> |
-        <a href="https://tmason17.github.io/">GitHub.io</a> |
-        <a href="https://tmason17.github.io/itis3135/">ITIS3135</a> |
-        <a href="https://www.freecodecamp.org/tmason17">freeCodeCamp</a> |
-        <a href="https://www.codecademy.com/profiles/tmason17">Codecademy</a> |
-        <a href="https://www.linkedin.com/in/tonymasonjr/">LinkedIn</a>
-    </nav>
+    <div data-include="components/footer.html"></div>
 
-    <p>
-        Page designed by
-        <a href="tonymasondesigns.com/">Tony Mason Designs</a>
-    </p>
-
-    <p>Certified in <strong>Responsive Web Design</strong></p>
-
-  </footer>
-
-    <script
-        src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
-        defer>
-    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
+
 </html>
