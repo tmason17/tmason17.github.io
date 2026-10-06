@@ -5,16 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tony Mason's Timeless Monkey | ITIS3135 | About</title>
+    <title>Tony Mason's Timeless Monkey | ITIS3135 | Home</title>
 
     <link rel="icon" href="images/favicon.svg">
-    <link rel="stylesheet" href="styles/default.css">
 
-    <script
-        src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
-        defer>
-    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFD23F;
+            color: #C8102E;
+            max-width: 1200px;
+            width: 90%;
+            margin: auto;
+        }
 
+        h1,
+        h2 {
+            font-family: Georgia, serif;
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #C8102E;
+        }
+
+        a:visited {
+            color: #C8102E;
+        }
+
+        a:hover {
+            color: #C8102E;
+        }
+
+        figure {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                width: 95%;
+                margin: auto;
+            }
+        }
+    </style>
+
+    <!-- Accumulus (cloud) -->
     <script
         src="https://lint.page/kit/4d0fe3.js"
         crossorigin="anonymous">
@@ -23,96 +87,15 @@
 
 <body>
 
-    <header>
-        <h1>Tony Mason's Timeless Monkey | ITIS3135</h1>
-
-        <p><em>No clock. No limits. Just progress.</em></p>
-
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="contract.html">Contract</a> |
-            <a href="introduction.html">Introduction</a> |
-            <a href="about.html">About</a> |
-            <a href="survey.html">Survey</a> |
-            <a href="cards.html">Cards</a> |
-            <a href="inventory.html">Inventory</a> |
-            <a href="documentation.html">Documentation</a> |
-            <a href="product.html">Product</a> |
-            <a href="website_evaluations.html">CRAP Evaluations</a> |
-            <a href="images.html">Pictures</a> |
-            <a href="introduction_form.html">Introduction Form</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
-        <h2>About</h2>
+        <h2>Home</h2>
 
         <p>
-            This website is built in part to demonstrate my work for
-            ITIS3135 - Front-End Web Application Development at UNC Charlotte
-            in a section taught by Mr. von Briesen. Additional information
-            about the course can be found on the
-            <a href="https://divonbriesen.github.io/teaching/itis3135/">
-                ITIS3135 Course Hub
-            </a>.
+            Welcome to my ITIS3135 course website.
+            This site contains my work for Front End Web App Development.
         </p>
-
-        <p>
-            This course provides students with relevant experience in
-            front-end web application development by having students build
-            multiple websites using a variety of development tools and
-            techniques.
-        </p>
-
-        <h3>Tools Used in the Course</h3>
-
-        <ul>
-            <li>VS Code</li>
-            <li>Emmet within VS Code</li>
-            <li>SFTP via FileZilla</li>
-            <li>Git via GitHub Desktop and GitHub.com</li>
-            <li>Various browser tools</li>
-            <li>The Accumulus Validator</li>
-        </ul>
-
-        <h3>Sites and Projects</h3>
-
-        <p>
-            The sites and projects students will build throughout the
-            course include:
-        </p>
-
-        <ul>
-            <li>
-                <a href="../index.html">A personal home portfolio</a>
-            </li>
-
-            <li>
-                <a href="index.html">This ITIS3135 course site</a>
-            </li>
-
-            <li>
-                A design firm site representing a fictitious or
-                aspirational design and consulting firm.
-            </li>
-
-            <li>
-                A Crappy Page intended to demonstrate poor web design
-                practices so those practices can be avoided elsewhere.
-            </li>
-
-            <li>
-                A whimsical product company.
-            </li>
-
-            <li>
-                A student, colleague, or peer management tool.
-            </li>
-
-            <li>
-                A client project website.
-            </li>
-        </ul>
 
         <figure>
             <img
@@ -125,29 +108,15 @@
         </figure>
     </main>
 
-    <footer>
-        <nav>
-            <a href="https://webpages.charlotte.edu/tmason17/">CLT Web</a> |
-            <a href="https://github.com/tmason17">GitHub</a> |
-            <a href="https://tmason17.github.io/">GitHub.io</a> |
-            <a href="https://tmason17.github.io/itis3135/">ITIS3135</a> |
-            <a href="https://www.freecodecamp.org/tmason17">freeCodeCamp</a> |
-            <a href="https://www.codecademy.com/profiles/tmason17">Codecademy</a> |
-            <a href="https://www.linkedin.com/in/tonymasonjr/">LinkedIn</a>
-        </nav>
+    <div data-include="components/footer.html"></div>
 
-        <p>
-            Page designed by
-            <a href="https://webpages.charlotte.edu/tmason17/">
-                Tony Mason Designs
-            </a>
-        </p>
+    <script src="scripts/HTMLInclude.min.js"></script>
 
-        <p>
-            Certified in <strong>Responsive Web Design</strong>
-        </p>
-    </footer>
-
+    <!-- Vicunadator (llama) - last item in body -->
+    <script
+        src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
+        defer>
+    </script>
 </body>
 
 </html>
