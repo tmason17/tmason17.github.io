@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+<title>Who — original running hobby vector artwork</title>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2435"/><stop offset="0.55" stop-color="#34485a"/><stop offset="1" stop-color="#d17e58"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1b9"/><stop offset="1" stop-color="#f7a65d"/></linearGradient>
+  <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34454b"/><stop offset="1" stop-color="#10232e"/></linearGradient>
+  <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18394a"/><stop offset="1" stop-color="#0b1e2a"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0" stop-color="#ffdca2" stop-opacity=".6"/><stop offset="1" stop-color="#ffc36b" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="960" height="540" fill="url(#sky)"/><g fill="#ffe0b1" opacity=".2"><ellipse cx="145" cy="105" rx="110" ry="15"/><ellipse cx="290" cy="143" rx="80" ry="11"/><ellipse cx="780" cy="92" rx="115" ry="14"/></g><circle cx="790" cy="195" r="180" fill="url(#glow)"/><circle cx="790" cy="195" r="61" fill="url(#sun)"/><g fill="#142c38" opacity=".88"><rect x="40" y="270" width="58" height="65" rx="2"/><rect x="105" y="230" width="58" height="105" rx="2"/><rect x="185" y="252" width="58" height="83" rx="2"/><rect x="260" y="192" width="58" height="143" rx="2"/><rect x="343" y="237" width="58" height="98" rx="2"/><rect x="425" y="160" width="58" height="175" rx="2"/><rect x="512" y="220" width="58" height="115" rx="2"/><rect x="590" y="145" width="58" height="190" rx="2"/><rect x="670" y="213" width="58" height="122" rx="2"/><rect x="740" y="171" width="58" height="164" rx="2"/><rect x="824" y="240" width="58" height="95" rx="2"/><rect x="900" y="217" width="60" height="118" rx="2"/></g><g fill="#f4b878" opacity=".45"><rect x="284" y="232" width="6" height="9"/><rect x="310" y="232" width="6" height="9"/><rect x="446" y="200" width="7" height="12"/><rect x="471" y="228" width="7" height="12"/><rect x="614" y="188" width="7" height="11"/><rect x="642" y="226" width="7" height="11"/></g><path d="M0 325 Q170 268 355 335 Q565 275 745 322 Q855 290 960 320 V540 H0 Z" fill="#173642"/>
+            <path d="M0 378 Q245 335 440 383 Q670 340 960 365 V540 H0 Z" fill="#102a36"/><path d="M0 540 L395 335 L520 335 L960 540 Z" fill="url(#road)"/>
+        <path d="M480 340 L492 540" stroke="#e8b16b" stroke-width="5" stroke-dasharray="26 24" opacity=".8"/>
+        <path d="M392 337 L20 540 M521 337 L932 540" stroke="#e1a469" stroke-width="4" opacity=".65"/><g transform="translate(495 365) scale(1.25)" stroke="#071b26" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <circle cx="0" cy="-104" r="18" fill="#071b26" stroke="none"/>
+        <path d="M-4 -80 L-25 -24 L5 0" stroke-width="23"/>
+        <path d="M-16 -65 L-66 -33 L-92 -48" stroke-width="13"/>
+        <path d="M-12 -64 L35 -57 L63 -25" stroke-width="13"/>
+        <path d="M4 0 L-58 45 L-104 28" stroke-width="17"/>
+        <path d="M4 0 L57 42 L84 94" stroke-width="17"/>
+        <path d="M-109 30 L-128 27 M83 96 L112 99" stroke-width="10" stroke="#eec28a"/>
+    </g>
+</svg>

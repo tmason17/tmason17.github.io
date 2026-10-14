@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+<title>Prompts — original running hobby vector artwork</title>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2435"/><stop offset="0.55" stop-color="#34485a"/><stop offset="1" stop-color="#d17e58"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1b9"/><stop offset="1" stop-color="#f7a65d"/></linearGradient>
+  <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34454b"/><stop offset="1" stop-color="#10232e"/></linearGradient>
+  <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18394a"/><stop offset="1" stop-color="#0b1e2a"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0" stop-color="#ffdca2" stop-opacity=".6"/><stop offset="1" stop-color="#ffc36b" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="960" height="540" fill="url(#sky)"/><g fill="#ffe0b1" opacity=".2"><ellipse cx="145" cy="105" rx="110" ry="15"/><ellipse cx="290" cy="143" rx="80" ry="11"/><ellipse cx="780" cy="92" rx="115" ry="14"/></g><circle cx="780" cy="190" r="180" fill="url(#glow)"/><circle cx="780" cy="190" r="61" fill="url(#sun)"/><path d="M0 325 Q170 268 355 335 Q565 275 745 322 Q855 290 960 320 V540 H0 Z" fill="#173642"/>
+            <path d="M0 378 Q245 335 440 383 Q670 340 960 365 V540 H0 Z" fill="#102a36"/><path d="M0 410 Q270 380 510 421 Q720 386 960 412 V540 H0 Z" fill="#0a2330"/><g transform="translate(150 120)"><rect x="0" y="0" width="520" height="315" rx="19" fill="#0a1822" stroke="#f5c17b" stroke-width="10"/>
+      <rect x="19" y="19" width="482" height="273" rx="8" fill="url(#screen)"/>
+      <g stroke-linecap="round" stroke-width="12"><path d="M78 82 L48 107 L78 132" stroke="#ffc36b" fill="none"/><path d="M130 82 L160 107 L130 132" stroke="#ffc36b" fill="none"/>
+      <path d="M206 80 H365 M206 117 H419 M90 189 H295 M90 227 H385" stroke="#91b7b6"/></g>
+      <path d="M-50 315 H570 L620 350 H-100 Z" fill="#d8c6a8"/><rect x="193" y="322" width="133" height="12" rx="5" fill="#8a938c"/></g><g fill="none" stroke="#f9c478" stroke-width="9"><path d="M730 300 Q825 250 910 310"/><path d="M740 352 Q810 385 910 350"/></g>
+</svg>

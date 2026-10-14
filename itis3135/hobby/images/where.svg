@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+<title>Where — original running hobby vector artwork</title>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2435"/><stop offset="0.55" stop-color="#34485a"/><stop offset="1" stop-color="#d17e58"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1b9"/><stop offset="1" stop-color="#f7a65d"/></linearGradient>
+  <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34454b"/><stop offset="1" stop-color="#10232e"/></linearGradient>
+  <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18394a"/><stop offset="1" stop-color="#0b1e2a"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0" stop-color="#ffdca2" stop-opacity=".6"/><stop offset="1" stop-color="#ffc36b" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="960" height="540" fill="url(#sky)"/><g fill="#ffe0b1" opacity=".2"><ellipse cx="145" cy="105" rx="110" ry="15"/><ellipse cx="290" cy="143" rx="80" ry="11"/><ellipse cx="780" cy="92" rx="115" ry="14"/></g><circle cx="640" cy="175" r="180" fill="url(#glow)"/><circle cx="640" cy="175" r="61" fill="url(#sun)"/><path d="M0 325 Q170 268 355 335 Q565 275 745 322 Q855 290 960 320 V540 H0 Z" fill="#173642"/>
+            <path d="M0 378 Q245 335 440 383 Q670 340 960 365 V540 H0 Z" fill="#102a36"/><path d="M0 540 L395 335 L520 335 L960 540 Z" fill="url(#road)"/>
+        <path d="M480 340 L492 540" stroke="#e8b16b" stroke-width="5" stroke-dasharray="26 24" opacity=".8"/>
+        <path d="M392 337 L20 540 M521 337 L932 540" stroke="#e1a469" stroke-width="4" opacity=".65"/><g fill="#092a2b"><rect x="45" y="280" width="12" height="190"/><circle cx="51" cy="280" r="60"/><circle cx="27" cy="300" r="37"/><circle cx="77" cy="310" r="42"/><rect x="115" y="280" width="12" height="190"/><circle cx="121" cy="280" r="60"/><circle cx="97" cy="300" r="37"/><circle cx="147" cy="310" r="42"/><rect x="190" y="280" width="12" height="190"/><circle cx="196" cy="280" r="50"/><circle cx="172" cy="300" r="37"/><circle cx="222" cy="310" r="42"/><rect x="810" y="280" width="12" height="190"/><circle cx="816" cy="280" r="50"/><circle cx="792" cy="300" r="37"/><circle cx="842" cy="310" r="42"/><rect x="875" y="280" width="12" height="190"/><circle cx="881" cy="280" r="60"/><circle cx="857" cy="300" r="37"/><circle cx="907" cy="310" r="42"/><rect x="940" y="280" width="12" height="190"/><circle cx="946" cy="280" r="50"/><circle cx="922" cy="300" r="37"/><circle cx="972" cy="310" r="42"/></g><path d="M465 337 Q510 420 650 540" stroke="#f5c37c" stroke-width="7" stroke-dasharray="25 20" fill="none"/>
+</svg>

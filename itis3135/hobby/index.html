@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tony Mason's running hobby site: the who, what, when, where, how, and why of running.">
+
+    <title>Running | Tony Mason's Hobby</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+
+
+    <style>
+
+        /* Website Colors */
+
+        :root {
+
+            --background: #06141c;
+
+            --surface: #0c202b;
+
+            --surface-light: #122d3a;
+
+            --text: #f7f5ef;
+
+            --muted: #c5d1d5;
+
+            --gold: #ffc36b;
+
+            --gold-deep: #e7a64e;
+
+            --border: #2a4350;
+
+        }
+
+
+
+        /* General Page Styling */
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+    max-width: 100%;
+    margin: auto;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+}
+
+
+
+        /* Links */
+
+        a {
+
+            color: var(--gold);
+
+        }
+
+
+
+        a:hover,
+
+        a:focus-visible {
+
+            color: #ffe0ad;
+
+        }
+
+
+
+        a:focus-visible,
+
+        button:focus-visible {
+
+            outline: 3px solid var(--gold);
+
+            outline-offset: 4px;
+
+        }
+
+
+
+        /* The class attributes organize the hero, navigation,
+
+           cards, and figures. The id attributes connect the
+
+           navigation links to each hobby section. Div elements
+
+           group visual layout, and spans hold decorative symbols. */
+
+
+
+        /* Website Header */
+
+        .site-header {
+
+            background: #081a23;
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+
+        /* Running Hero Banner */
+
+        .hero {
+
+            min-height: 230px;
+
+            background: linear-gradient(
+
+                90deg,
+
+                rgba(2, 12, 18, .91) 0%,
+
+                rgba(2, 12, 18, .62) 45%,
+
+                rgba(2, 12, 18, .1) 100%
+
+            ),
+
+            url("images/hero.svg") center / cover no-repeat;
+
+
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 30px max(5%, calc((100% - 1300px) / 2));
+
+        }
+
+
+
+       /* Paragraphs */
+p {
+    margin-top: 0;
+}
+
+
+
+  
+h1 {
+    margin-top: 0;
+    font-family: Impact, "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
+    line-height: 1;
+    font-style: italic;
+    letter-spacing: .045em;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, .45);
+}
+
+
+
+
+        /* Header Tagline */
+
+        .tagline {
+
+            color: var(--gold);
+
+            font-size: clamp(.8rem, 1.5vw, 1.1rem);
+
+            letter-spacing: .22em;
+
+            font-weight: 700;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* Navigation Menu */
+
+        .site-nav {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 0;
+
+            max-width: 1300px;
+
+            margin: auto;
+
+        }
+
+
+
+        .nav-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 17px 19px;
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            border-bottom: 3px solid transparent;
+
+            transition: background-color .2s, color .2s;
+
+        }
+
+
+
+        /* Gold Divider Between Navigation Links */
+
+        .nav-link:not(:last-child)::after {
+
+            content: "✦";
+
+            color: var(--gold-deep);
+
+            font-size: .58rem;
+
+            margin-left: 12px;
+
+        }
+
+
+
+        /* Active Navigation Link */
+
+        .nav-link:hover,
+
+        .nav-link:focus-visible,
+
+        .nav-link[aria-current="page"] {
+
+            color: var(--gold);
+
+            background: rgba(255, 195, 107, .08);
+
+            border-bottom-color: var(--gold);
+
+        }
+
+
+
+        .nav-icon {
+
+            font-size: 1.2rem;
+
+        }
+
+
+
+        /* Main Content */
+
+        main {
+
+            max-width: 1380px;
+
+            margin: 0 auto;
+
+            padding: 24px 20px 34px;
+
+            min-height: 560px;
+
+        }
+
+
+
+        /* Individual Hobby Sections */
+
+        .page {
+
+            background: linear-gradient(
+
+                145deg,
+
+                rgba(18, 45, 58, .92),
+
+                rgba(6, 20, 28, .97)
+
+            );
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            padding: clamp(22px, 4vw, 46px);
+
+            box-shadow: 0 14px 35px rgba(0, 0, 0, .17);
+
+        }
+
+
+
+        /* Hide Sections That Are Not Selected */
+
+        .page[hidden] {
+
+            display: none;
+
+        }
+
+
+
+        /* Section Divider Symbol */
+
+        .section-symbol {
+
+            color: var(--gold);
+
+            font-size: 2rem;
+
+            text-align: center;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* Section Headings */
+
+      
+h2 {
+    margin-top: 0;
+    font-family: Impact, "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+
+
+
+        /* Section Introduction */
+
+        .intro {
+
+            color: var(--muted);
+
+            max-width: 790px;
+
+            margin: 0 auto 30px;
+
+            text-align: center;
+
+            font-size: 1.04rem;
+
+        }
+
+
+
+        /* Smaller Headings */
+
+     
+h3 {
+    margin-top: 0;
+    color: var(--gold);
+    font-family: Impact, "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: .025em;
+    margin-bottom: 8px;
+}
+
+
+       
+/* Three Column Layout */
+/* csslint ignore:start */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+/* csslint ignore:end */
+
+
+
+
+        /* Feature Cards */
+
+        .feature-card {
+
+            min-width: 0;
+
+            background: rgba(4, 16, 23, .58);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 14px;
+
+        }
+
+
+
+        /* Figures and Images */
+
+        figure {
+
+            margin: 0;
+
+        }
+
+
+
+        figure img {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            aspect-ratio: 16 / 9;
+
+            object-fit: cover;
+
+            border-radius: 9px;
+
+            background: var(--surface-light);
+
+        }
+
+
+
+        /* Image Captions */
+
+        figcaption {
+
+            color: var(--gold);
+
+            font-size: 1.1rem;
+
+            font-weight: 800;
+
+            margin: 12px 0 8px;
+
+        }
+
+
+
+        /* Card Descriptions */
+
+        .feature-card > p,
+
+        .info-block p {
+
+            color: var(--muted);
+
+        }
+
+
+
+        /* AI Image Prompt Descriptions */
+
+        .prompt-note {
+
+            color: #b5c4ca;
+
+            font-size: .86rem;
+
+            border-top: 1px solid var(--border);
+
+            margin-top: 13px;
+
+            padding-top: 10px;
+
+        }
+
+
+
+        /* Two Column Layout */
+
+        .split-layout {
+
+            display: grid;
+
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+
+            align-items: start;
+
+            gap: 32px;
+
+            max-width: 1110px;
+
+            margin: auto;
+
+        }
+
+
+
+        /* Information Boxes */
+
+        .info-block {
+
+            padding: 18px 20px;
+
+            border-left: 3px solid var(--gold);
+
+            background: rgba(4, 16, 23, .5);
+
+            margin-bottom: 18px;
+
+            border-radius: 0 10px 10px 0;
+
+        }
+
+
+
+        .info-block p:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* Image Panel */
+
+        .visual-panel {
+
+            background: rgba(4, 16, 23, .55);
+
+            border: 1px solid var(--border);
+
+            padding: 14px;
+
+            border-radius: 12px;
+
+        }
+
+
+
+        /* Lists */
+
+        ul, ol {
+
+            padding-left: 24px;
+
+        }
+
+
+
+        li {
+
+            margin: 7px 0;
+
+        }
+
+
+
+        strong {
+
+            color: #fff1d9;
+
+        }
+
+
+
+        /* Running Schedule Table */
+
+        .schedule {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin: 12px 0 20px;
+
+            font-size: .94rem;
+
+        }
+
+
+
+        .schedule caption {
+
+            color: var(--gold);
+
+            font-weight: bold;
+
+            text-align: left;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .schedule th,
+
+        .schedule td {
+
+            border-bottom: 1px solid var(--border);
+
+            text-align: left;
+
+            padding: 11px 10px;
+
+        }
+
+
+
+        .schedule th {
+
+            color: var(--gold);
+
+        }
+
+
+
+        /* Website Footer */
+
+        .site-footer {
+
+            border-top: 1px solid var(--border);
+
+            padding: 24px 20px 30px;
+
+            background: #06151d;
+
+            text-align: center;
+
+        }
+
+
+
+        /* Footer Layout */
+
+        .footer-inner {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 24px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        /* Footer Branding */
+
+        .footer-brand {
+
+            text-align: left;
+
+        }
+
+
+
+        .footer-brand strong {
+
+            font-size: 1.12rem;
+
+        }
+
+
+
+        .footer-brand p {
+
+            color: var(--gold);
+
+            font-size: .75rem;
+
+            letter-spacing: .2em;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* Validation Links */
+
+        .validation-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+        }
+
+
+
+        .validation-links a {
+
+            display: inline-block;
+
+            padding: 8px 12px;
+
+            background: #173746;
+
+            color: #fff4df;
+
+            border: 1px solid #42616f;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: .83rem;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .validation-links a:hover {
+
+            background: #315363;
+
+        }
+
+
+
+        /* Design Firm Credit */
+
+        .credit {
+
+            margin-bottom: 0;
+
+            color: var(--muted);
+
+        }
+
+
+
+        /* Tablet Responsiveness */
+
+        @media (max-width: 850px) {
+
+            .feature-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .split-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .footer-inner {
+
+                justify-content: center;
+
+            }
+
+
+
+            .footer-brand {
+
+                text-align: center;
+
+            }
+
+        }
+
+
+
+        /* Mobile Responsiveness */
+
+        @media (max-width: 540px) {
+
+            .hero {
+
+                min-height: 195px;
+
+            }
+
+
+
+            .site-nav {
+
+                justify-content: space-around;
+
+            }
+
+
+
+            .nav-link {
+
+                padding: 12px 8px;
+
+                font-size: .88rem;
+
+            }
+
+
+
+            .nav-link:not(:last-child)::after {
+
+                margin-left: 4px;
+
+            }
+
+
+
+            main {
+
+                padding: 14px 10px 25px;
+
+            }
+
+
+
+            .page {
+
+                padding: 22px 16px;
+
+            }
+
+
+
+            .schedule {
+
+                font-size: .8rem;
+
+            }
+
+
+
+            .schedule th,
+
+            .schedule td {
+
+                padding: 8px 5px;
+
+            }
+
+        }
+
+    </style>
+
+    <!-- Course standards and page lint checkers -->
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+
+<body>
+
+    <!-- The div elements group visual content. The class attributes style the
+
+         layout, navigation, figures, and cards. The id attributes identify the
+
+         seven sections for navigation and JavaScript section switching. -->
+
+
+
+    <!-- Website Header -->
+
+    <header class="site-header">
+
+        <div class="hero">
+
+            <div>
+
+                <h1>RUNNING</h1>
+
+                    <p class="tagline"><em>DISCIPLINE ✦ PROGRESS ✦ FREEDOM</em></p>
+            </div>
+
+        </div>
+
+
+
+        <!-- Hobby Navigation -->
+
+        <nav class="site-nav" aria-label="Running hobby navigation">
+
+            <a class="nav-link" href="#what" aria-current="page">
+
+                <span class="nav-icon" aria-hidden="true">⌂</span> What
+
+            </a>
+
+            <a class="nav-link" href="#who">
+
+                <span class="nav-icon" aria-hidden="true">●</span> Who
+
+            </a>
+
+            <a class="nav-link" href="#when">
+
+                <span class="nav-icon" aria-hidden="true">▦</span> When
+
+            </a>
+
+            <a class="nav-link" href="#where">
+
+                <span class="nav-icon" aria-hidden="true">⌖</span> Where
+
+            </a>
+
+            <a class="nav-link" href="#how">
+
+                <span class="nav-icon" aria-hidden="true">⚙</span> How
+
+            </a>
+
+            <a class="nav-link" href="#why">
+
+                <span class="nav-icon" aria-hidden="true">♥</span> Why
+
+            </a>
+
+            <a class="nav-link" href="#prompts">
+
+                <span class="nav-icon" aria-hidden="true">✧</span> AI Prompts
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Main Website Content -->
+
+    <main>
+
+
+
+        <!-- What Section: Default Home Page -->
+
+        <section class="page" id="what">
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>What Is Running?</h2>
+
+
+
+            <p class="intro">
+
+                Running is more than a physical activity. It is a way
+
+                to challenge yourself, clear your mind, and build
+
+                discipline. Whether on a track, treadmill, or
+
+                neighborhood path, every mile is a chance to improve.
+
+            </p>
+
+
+
+            <div class="feature-grid">
+
+
+
+                <!-- Physical Fitness Card -->
+
+                
+<article class="feature-card">
+
+    <h3>Build Physical Fitness</h3>
+
+    <figure>
+        <img src="images/fitness.svg"
+             alt="Illustrated runner moving quickly along a track"
+             width="960" height="540">
+
+        <figcaption>Build Physical Fitness</figcaption>
+    </figure>
+
+    <p class="prompt-note">
+        <em>
+            AI prompt: Create an original dark-and-gold
+            vector illustration of a runner training
+            on a track at sunrise.
+        </em>
+    </p>
+
+    <p>
+        Running builds endurance, supports heart health,
+        and strengthens the legs. Consistent training
+        makes everyday movement and other activities
+        feel easier.
+    </p>
+
+</article>
+
+
+
+
+                <!-- Mental Clarity Card -->
+
+                
+<article class="feature-card">
+
+    <h3>Clear Your Mind</h3>
+
+    <figure>
+        <img src="images/mind.svg"
+             alt="Illustrated sunset over a peaceful city running path"
+             width="960" height="540">
+
+        <figcaption>Clear Your Mind</figcaption>
+    </figure>
+
+    <p class="prompt-note">
+        <em>
+            AI prompt: Create a calm vector skyline
+            and running trail at sunset using deep
+            navy and warm gold.
+        </em>
+    </p>
+
+    <p>
+        A run creates time to think, reset, and step
+        away from distractions. Getting outside and
+        moving can help improve mood and focus.
+    </p>
+
+</article>
+
+<article class="feature-card">
+
+    <h3>Set and Achieve Goals</h3>
+
+    <figure>
+        <img src="images/goals.svg"
+             alt="Illustrated athletics track with finish line at sunset"
+             width="960" height="540">
+
+        <figcaption>Set and Achieve Goals</figcaption>
+    </figure>
+
+    <p class="prompt-note">
+        <em>
+            AI prompt: Create an original vector
+            athletics track with a finish line,
+            sunset, and an ambitious racing atmosphere.
+        </em>
+    </p>
+
+    <p>
+        Whether the goal is a faster mile, a longer
+        distance, or finishing a race, running rewards
+        consistency, patience, and hard work.
+    </p>
+
+</article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Who Section: About Me -->
+
+        <section class="page" id="who" hidden>
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>Who Is Behind the Miles?</h2>
+
+
+
+            <p class="intro">
+
+                This hobby site shares how running fits into my life
+
+                and why I enjoy improving a little at a time.
+
+            </p>
+
+
+
+            <div class="split-layout">
+
+                <div>
+
+
+
+                    <!-- Personal Introduction -->
+
+                    <div class="info-block">
+
+                        <h3>Meet the Runner</h3>
+
+                        <p>
+
+                            I'm Tony Mason, a UNC Charlotte student
+
+                            who enjoys fitness, challenging workouts,
+
+                            and setting measurable goals.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Running Approach -->
+
+                    <div class="info-block">
+
+                        <h3>My Approach</h3>
+
+                        <p>
+
+                            I enjoy mixing easy runs with more focused
+
+                            sessions. I pay attention to pacing, effort,
+
+                            and how my training improves over time.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Running Motivation -->
+
+                    <div class="info-block">
+
+                        <h3>What Keeps Me Going</h3>
+
+                        <p>
+
+                            Progress is motivating. Every run gives me
+
+                            another opportunity to develop discipline
+
+                            and learn what I can accomplish.
+
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- Who Section Image -->
+
+                
+<figure class="visual-panel">
+    <img src="images/who.svg"
+         alt="Illustrated runner on a city path with a glowing skyline"
+         width="960" height="540">
+
+    <figcaption>
+        A Runner's Journey
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original cinematic
+                vector illustration of a runner on a city
+                path, with a warm sunrise and navy shadows.
+            </em>
+        </p>
+    </figcaption>
+</figure>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- When Section: Running Schedule -->
+
+        <section class="page" id="when" hidden>
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>When Is the Best Time to Run?</h2>
+
+
+
+            <p class="intro">
+
+                The best time is the one that fits your schedule
+
+                and lets you train consistently. Morning and
+
+                evening runs each have advantages.
+
+            </p>
+
+
+
+            <div class="split-layout">
+
+                <div>
+
+
+
+                    <!-- Best Times to Run -->
+
+                    <div class="info-block">
+
+                        <h3>Morning or Evening?</h3>
+
+                        <p>
+
+                            Cooler mornings can feel refreshing,
+
+                            while evenings may work better after
+
+                            classes and responsibilities. Choose
+
+                            well-lit routes when visibility is low.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Example Weekly Running Schedule -->
+
+                    <table class="schedule">
+
+                        <caption>Example Weekly Running Schedule</caption>
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">Day</th>
+
+                                <th scope="col">Run</th>
+
+                                <th scope="col">Focus</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>Tuesday</td>
+
+                                <td>Easy run</td>
+
+                                <td>Comfortable pace</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Thursday</td>
+
+                                <td>Intervals</td>
+
+                                <td>Speed and control</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Saturday</td>
+
+                                <td>Steady run</td>
+
+                                <td>Endurance</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+
+                    <p>
+
+                        This is an example, not a fixed training
+
+                        prescription. Rest and recovery days are
+
+                        important, too.
+
+                    </p>
+
+
+
+                </div>
+
+
+
+                <!-- When Section Image -->
+
+               
+<figure class="visual-panel">
+    <img src="images/when.svg"
+         alt="Illustrated sunrise and clock overlooking a running track"
+         width="960" height="540">
+
+    <figcaption>
+        Make Time for the Miles
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create a vector illustration
+                of an early morning running track with
+                a stylized clock and golden sunrise.
+            </em>
+        </p>
+    </figcaption>
+</figure>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Where Section: Running Locations -->
+
+        <section class="page" id="where" hidden>
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>Where Can You Run?</h2>
+
+
+
+            <p class="intro">
+
+                A good running location depends on your workout,
+
+                the weather, and how comfortable you feel in
+
+                the environment.
+
+            </p>
+
+
+
+            <div class="split-layout">
+
+                <div>
+
+
+
+                    <!-- Running Tracks -->
+
+                    <div class="info-block">
+
+                        <h3>Tracks</h3>
+
+                        <p>
+
+                            Tracks are great for measuring distance,
+
+                            practicing pacing, and completing interval
+
+                            workouts on a predictable surface.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Parks and Trails -->
+
+                    <div class="info-block">
+
+                        <h3>Parks and Trails</h3>
+
+                        <p>
+
+                            Greenways and park paths are useful for
+
+                            relaxed runs and enjoying the outdoors.
+
+                            Pay attention to trail conditions and
+
+                            other visitors.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Treadmill Running -->
+
+                    <div class="info-block">
+
+                        <h3>Treadmills</h3>
+
+                        <p>
+
+                            Treadmills offer a controlled option
+
+                            when weather, darkness, or scheduling
+
+                            makes outdoor running difficult.
+
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- Where Section Image -->
+
+                
+<figure class="visual-panel">
+    <img src="images/where.svg"
+         alt="Illustrated winding running trail through trees"
+         width="960" height="540">
+
+    <figcaption>
+        Find Your Running Route
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original vector
+                illustration of a winding running trail
+                in a park with dark green trees and
+                golden light.
+            </em>
+        </p>
+    </figcaption>
+</figure>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- How Section: Getting Started -->
+
+        <section class="page" id="how" hidden>
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>How Do You Start Running?</h2>
+
+
+
+            <p class="intro">
+
+                You do not need to be fast to begin.
+
+                The goal is to build a routine that feels
+
+                manageable and gets stronger over time.
+
+            </p>
+
+
+
+            <div class="split-layout">
+
+                <div>
+
+
+
+                    <!-- Running Basics -->
+
+                    <div class="info-block">
+
+                        <h3>Start with the Basics</h3>
+
+
+
+                        <ol>
+
+                            <li>
+
+                                <strong>Warm up:</strong>
+
+                                Walk briskly and ease into movement.
+
+                            </li>
+
+                            <li>
+
+                                <strong>Run comfortably:</strong>
+
+                                Use a pace where you can still
+
+                                speak in sentences.
+
+                            </li>
+
+                            <li>
+
+                                <strong>Build gradually:</strong>
+
+                                Increase time and distance as
+
+                                your body adapts.
+
+                            </li>
+
+                            <li>
+
+                                <strong>Recover:</strong>
+
+                                Include easier days, sleep, and rest.
+
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+
+
+                    <!-- Tracking Progress -->
+
+                    <div class="info-block">
+
+                        <h3>Track Your Progress</h3>
+
+                        <p>
+
+                            Record your distance, time, and how
+
+                            each run felt. Consistency over several
+
+                            weeks tells you more than a single
+
+                            hard workout.
+
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- How Section Image -->
+
+                
+<figure class="visual-panel">
+    <img src="images/how.svg"
+         alt="Illustrated running shoes and winding route markings"
+         width="960" height="540">
+
+    <figcaption>
+        One Step at a Time
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original vector
+                illustration of running shoes on a
+                track with motion lines and warm
+                gold highlights.
+            </em>
+        </p>
+    </figcaption>
+</figure>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Why Section: Personal Motivation -->
+
+        <section class="page" id="why" hidden>
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>Why Do I Love Running?</h2>
+
+
+
+            <p class="intro">
+
+                Running makes progress visible. A difficult
+
+                workout today can become a comfortable effort
+
+                after weeks of practice.
+
+            </p>
+
+
+
+            <div class="split-layout">
+
+                <div>
+
+
+
+                    <!-- Personal Growth -->
+
+                    <div class="info-block">
+
+                        <h3>Personal Growth</h3>
+
+                        <p>
+
+                            Running teaches me to stay consistent
+
+                            even when improvement is gradual.
+
+                            Small accomplishments add up.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Confidence -->
+
+                    <div class="info-block">
+
+                        <h3>Confidence</h3>
+
+                        <p>
+
+                            Completing a challenging run reminds
+
+                            me that preparation and determination
+
+                            can make difficult goals achievable.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Freedom -->
+
+                    <div class="info-block">
+
+                        <h3>Freedom</h3>
+
+                        <p>
+
+                            Sometimes the best part is simply
+
+                            being outdoors, moving forward,
+
+                            and enjoying a break from the day.
+
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- Why Section Image -->
+
+                
+<figure class="visual-panel">
+    <img src="images/why.svg"
+         alt="Illustrated runner crossing a finish line beneath a glowing sky"
+         width="960" height="540">
+
+    <figcaption>
+        Run Stronger Every Day
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original inspirational
+                vector illustration of a runner crossing
+                a finish line at sunset.
+            </em>
+        </p>
+    </figcaption>
+</figure>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AI Prompts Section -->
+
+        <section class="page" id="prompts" hidden>
+
+            <p class="section-symbol" aria-hidden="true">✦</p>
+
+            <h2>AI Prompts and Credits</h2>
+
+
+
+            <p class="intro">
+
+                AI assisted with this site's HTML, CSS,
+
+                JavaScript, writing, and original SVG artwork.
+
+                The prompts below describe that assistance.
+
+            </p>
+
+
+
+            <div class="split-layout">
+
+                <div>
+
+
+
+                    <!-- Website Code Prompt -->
+
+                    <div class="info-block">
+
+                        <h3>Website Code Prompt</h3>
+
+                        <p>
+
+                            "Build a responsive single-page running
+
+                            hobby website with seven sections,
+
+                            embedded CSS, accessible navigation,
+
+                            and JavaScript that displays only
+
+                            the selected section. Use a dark
+
+                            navy and gold design."
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Writing Prompt -->
+
+                    <div class="info-block">
+
+                        <h3>Writing Prompt</h3>
+
+                        <p>
+
+                            "Write clear, student-friendly content
+
+                            explaining who, what, when, where,
+
+                            how, and why someone enjoys running.
+
+                            Include practical examples and a
+
+                            personal perspective."
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Artwork Prompt -->
+
+                    <div class="info-block">
+
+                        <h3>Artwork Prompt</h3>
+
+                        <p>
+
+                            "Create a coordinated set of original
+
+                            SVG running illustrations using a
+
+                            cinematic dark navy, sunset orange,
+
+                            and gold palette. Include tracks,
+
+                            trails, runners, and a city skyline."
+
+                        </p>
+
+                    </div>
+
+
+
+                    <p>
+
+                        All artwork in the <strong>images</strong>
+
+                        folder was created as AI-assisted original
+
+                        SVG code for this project, not copied
+
+                        from another website.
+
+                    </p>
+
+
+
+                </div>
+
+
+
+                <!-- AI Prompts Section Image -->
+
+                
+<figure class="visual-panel">
+    <img src="images/prompts.svg"
+         alt="Illustrated computer screen showing code beside a running track"
+         width="960" height="540">
+
+    <figcaption>
+        How This Site Was Created
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original vector
+                illustration combining a coding screen
+                and a running track in a consistent
+                navy-and-gold style.
+            </em>
+        </p>
+    </figcaption>
+</figure>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- Website Footer -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+
+
+            <!-- Website Branding -->
+
+            <div class="footer-brand">
+
+                <strong>🏃 Tony Mason's Running Site</strong>
+
+                <p>RUN STRONGER EVERY DAY</p>
+
+            </div>
+
+
+
+            <!-- Website Validation Links -->
+
+            <nav class="validation-links" aria-label="Page validation links">
+
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Ftmason17%2Fitis3135%2Fhobby%2Findex.html"
+
+                   target="_blank"
+
+                   rel="noopener noreferrer">
+
+                    HTML Validation ↗
+
+                </a>
+
+
+
+                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Ftmason17%2Fitis3135%2Fhobby%2Findex.html"
+
+                   target="_blank"
+
+                   rel="noopener noreferrer">
+
+                    CSS Validation ↗
+
+                </a>
+
+
+
+                <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/tmason17/itis3135/hobby/"
+
+                   target="_blank"
+
+                   rel="noopener noreferrer">
+
+                    Accessibility ↗
+
+                </a>
+
+            </nav>
+
+
+
+            <!-- Design Firm Credit -->
+
+            <p class="credit">
+
+                Designed by
+
+                <a href="https://webpages.charlotte.edu/tmason17/itis3135/tonymasondesigns.com/">
+
+                    Tony Mason Designs
+
+                </a>
+
+            </p>
+
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript for Hobby Navigation -->
+
+    <script>
+
+        // Section IDs and navigation classes connect each tab to its page.
+
+        const pages = document.querySelectorAll(".page");
+
+        const links = document.querySelectorAll(".nav-link");
+
+
+
+        const validPages = new Set(
+
+            Array.from(pages, (page) => page.id)
+
+        );
+
+
+
+        // Display only the selected section.
+
+        function showPage() {
+
+            const requested = window.location.hash.substring(1);
+
+            const selected = validPages.has(requested) ? requested : "what";
+
+
+
+            pages.forEach((page) => {
+
+                page.hidden = page.id !== selected;
+
+            });
+
+
+
+            // Highlight the selected navigation link.
+
+            links.forEach((link) => {
+
+                if (link.getAttribute("href") === `#${selected}`) {
+
+                    link.setAttribute("aria-current", "page");
+
+                } else {
+
+                    link.removeAttribute("aria-current");
+
+                }
+
+            });
+
+        }
+
+
+
+        // Update the displayed section when navigation changes.
+
+        window.addEventListener("hashchange", showPage);
+
+
+
+        // Show the What section when the website first loads.
+
+        showPage();
+
+    </script>
+
+</body>
+
+</html>

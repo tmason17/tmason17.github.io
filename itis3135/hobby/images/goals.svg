@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+<title>Goals — original running hobby vector artwork</title>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2435"/><stop offset="0.55" stop-color="#34485a"/><stop offset="1" stop-color="#d17e58"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1b9"/><stop offset="1" stop-color="#f7a65d"/></linearGradient>
+  <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34454b"/><stop offset="1" stop-color="#10232e"/></linearGradient>
+  <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18394a"/><stop offset="1" stop-color="#0b1e2a"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0" stop-color="#ffdca2" stop-opacity=".6"/><stop offset="1" stop-color="#ffc36b" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="960" height="540" fill="url(#sky)"/><g fill="#ffe0b1" opacity=".2"><ellipse cx="145" cy="105" rx="110" ry="15"/><ellipse cx="290" cy="143" rx="80" ry="11"/><ellipse cx="780" cy="92" rx="115" ry="14"/></g><circle cx="760" cy="180" r="180" fill="url(#glow)"/><circle cx="760" cy="180" r="61" fill="url(#sun)"/><path d="M0 325 Q170 268 355 335 Q565 275 745 322 Q855 290 960 320 V540 H0 Z" fill="#173642"/>
+            <path d="M0 378 Q245 335 440 383 Q670 340 960 365 V540 H0 Z" fill="#102a36"/><path d="M0 410 Q270 380 510 421 Q720 386 960 412 V540 H0 Z" fill="#0a2330"/><path d="M0 365 L960 365 V540 H0 Z" fill="#7b4b43" opacity=".83"/>
+    <path d="M0 408 L960 390 M0 467 L960 427 M0 530 L960 472" stroke="#f3d1a5" stroke-width="5" opacity=".75"/>
+    <path d="M250 540 L470 367 M690 540 L535 367" stroke="#f3d1a5" stroke-width="4" opacity=".8"/><path d="M760 130 V460" stroke="#f4d1a0" stroke-width="11"/><path d="M765 135 H920 L878 195 H765 Z" fill="#f6c578"/><path d="M95 410 H900" stroke="#fff3d7" stroke-width="11" stroke-dasharray="40 24"/>
+</svg>
