@@ -28,7 +28,18 @@ nav {
 
 /* Main Content */
 main {
+    max-width: 900px;
     margin: 0 auto;
+}
+
+/* Center Welcome Paragraph */
+main p {
+    text-align: center;
+}
+
+/* Centered Content */
+.center, figure, figcaption, blockquote {
+    text-align: center;
 }
 
 /* Centered Content */
@@ -71,4 +82,15 @@ img {
     body {
         max-width: 95%;
     }
+}
+
+/* Book Inventory Table */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: center;
 }

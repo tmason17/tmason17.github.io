@@ -11,6 +11,11 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- The div elements load shared header and footer components.
+         The class attributes identify reading status and star ratings
+         for CSS styling. The span elements display status labels and
+         individual rating stars. -->
+
     <!-- Shared website header. -->
     <div data-include="components/header.html"></div>
 
@@ -34,7 +39,7 @@
                     <td>James Clear</td>
                     <td>Self Improvement</td>
                     <td><span class="status">Read</span></td>
-                    <td><span class="rate three" aria-label="3 out of 3 stars">
+                    <td><span class="rate three" role="img" aria-label="3 out of 3 stars">
                         <span></span><span></span><span></span>
                     </span></td>
                 </tr>
@@ -43,7 +48,7 @@
                     <td>David Goggins</td>
                     <td>Motivation</td>
                     <td><span class="status">Read</span></td>
-                    <td><span class="rate three" aria-label="3 out of 3 stars">
+                    <td><span class="rate three" role="img" aria-label="3 out of 3 stars">
                         <span></span><span></span><span></span>
                     </span></td>
                 </tr>
@@ -52,7 +57,7 @@
                     <td>Stephen R. Covey</td>
                     <td>Leadership</td>
                     <td><span class="status">In Progress</span></td>
-                    <td><span class="rate" aria-label="Not yet rated">
+                    <td><span class="rate" role="img" aria-label="Not yet rated">
                         <span></span><span></span><span></span>
                     </span></td>
                 </tr>
@@ -61,7 +66,7 @@
                     <td>Cal Newport</td>
                     <td>Productivity</td>
                     <td><span class="status">Read</span></td>
-                    <td><span class="rate two" aria-label="2 out of 3 stars">
+                    <td><span class="rate two" role="img" aria-label="2 out of 3 stars">
                         <span></span><span></span><span></span>
                     </span></td>
                 </tr>
@@ -70,7 +75,7 @@
                     <td>Carol S. Dweck</td>
                     <td>Personal Growth</td>
                     <td><span class="status">To Read</span></td>
-                    <td><span class="rate" aria-label="Not yet rated">
+                    <td><span class="rate" role="img" aria-label="Not yet rated">
                         <span></span><span></span><span></span>
                     </span></td>
                 </tr>
