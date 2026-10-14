@@ -1,4 +1,112 @@
-<p>
-    Page designed by
-    <a href="tonymasondesigns.com/">Tony Mason Designs</a>
-</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Mason's Timeless Monkey | ITIS3135 | Survey Form</title>
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Shared website header. -->
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Survey Form</h2>
+        <h3 id="title">Speed Racer Fan Survey</h3>
+        <p id="description">Tell us about your favorite Speed Racer cars and racing experiences.</p>
+
+        <form id="survey-form" action="#" method="get">
+            <p>
+                <label id="name-label" for="name">Full Name:</label>
+                <input id="name" name="name" type="text"
+                       placeholder="Enter your full name" required>
+            </p>
+
+            <p>
+                <label id="email-label" for="email">Email Address:</label>
+                <input id="email" name="email" type="email"
+                       placeholder="Enter your email" required>
+            </p>
+
+            <p>
+                <label id="number-label" for="number">Age:</label>
+                <input id="number" name="age" type="number"
+                       min="10" max="100" placeholder="Enter your age">
+            </p>
+
+            <p>
+                <label for="favorite">Favorite Activity:</label>
+                <input id="favorite" name="favorite" type="text"
+                       placeholder="Your favorite activity" required>
+            </p>
+
+            <p>
+                <label for="dropdown">Favorite Speed Racer Car:</label>
+                <select id="dropdown" name="favorite-car">
+                    <option value="">Select a car</option>
+                    <option value="mach5">Mach 5</option>
+                    <option value="mach4">Mach 4</option>
+                    <option value="grx">GRX</option>
+                    <option value="mammoth">Mammoth Car</option>
+                    <option value="shooting-star">Shooting Star</option>
+                    <option value="hydrophiidae">Hydrophiidae</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Which Speed Racer version do you prefer?</legend>
+                <label>
+                    <input type="radio" name="version" value="movie">
+                    2008 Movie
+                </label>
+                <label>
+                    <input type="radio" name="version" value="cartoon">
+                    Original TV Series
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What do you enjoy about Speed Racer?</legend>
+                <label>
+                    <input type="checkbox" name="interests" value="cars">
+                    Racing Cars
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="action">
+                    Racing Action
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="story">
+                    Story and Characters
+                </label>
+            </fieldset>
+
+            <p>
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments"
+                          rows="5" cols="40"
+                          placeholder="Share your thoughts"></textarea>
+            </p>
+
+            <p>
+                <button id="submit" type="submit">Submit Survey</button>
+            </p>
+        </form>
+
+        <figure>
+            <img src="images/mach5.jpeg"
+                 alt="Speed Racer Mach 5 race car"
+                 width="648" height="365">
+            <figcaption>Speed Racer Mach 5</figcaption>
+        </figure>
+    </main>
+
+    <!-- Shared website footer. -->
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

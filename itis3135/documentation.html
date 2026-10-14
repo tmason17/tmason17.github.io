@@ -1,4 +1,117 @@
-<p>
-    Page designed by
-    <a href="tonymasondesigns.com/">Tony Mason Designs</a>
-</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Mason's Timeless Monkey | ITIS3135 | Instructions</title>
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<!-- The div elements load the shared header and footer.
+The data-include attributes identify the shared HTML files.
+The navbar id identifies the documentation navigation.
+The nav-link class styles the navigation links.
+The main-doc id identifies the main documentation content.
+The main-section class groups and styles the documentation sections.
+Each section id allows navigation links to jump to that section.
+These ids and classes are needed for navigation, styling, and organization. -->
+
+    <!-- Shared website header -->
+    <div data-include="components/header.html"></div>
+
+    <!-- Documentation navigation -->
+    <nav id="navbar" aria-label="Documentation navigation">
+        <h3>Instructions</h3>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Website_Navigation">Website Navigation</a>
+        <a class="nav-link" href="#Website_Design">Website Design</a>
+        <a class="nav-link" href="#Website_Features">Website Features</a>
+        <a class="nav-link" href="#Website_Maintenance">Website Maintenance</a>
+    </nav>
+
+    <!-- Main documentation content -->
+    <main id="main-doc">
+        <h2>Instructions</h2>
+
+        <!-- Introduction -->
+        <section class="main-section" id="Introduction">
+            <h3>Introduction</h3>
+            <p>Welcome to the Timeless Monkey website documentation.</p>
+            <p>This page explains the website's structure and features.</p>
+            <code>&lt;!DOCTYPE html&gt;</code>
+            <ul>
+                <li>The site uses HTML.</li>
+                <li>The site uses CSS.</li>
+            </ul>
+        </section>
+
+        <!-- Website Navigation -->
+        <section class="main-section" id="Website_Navigation">
+            <h3>Website Navigation</h3>
+            <p>The navigation menu connects the website pages.</p>
+            <p>Shared components keep the menu consistent.</p>
+            <code>&lt;nav&gt;Navigation links&lt;/nav&gt;</code>
+            <ul>
+                <li>Survey Form collects visitor responses.</li>
+                <li>Playing Cards displays racing cars.</li>
+                <li>Book Inventory displays books.</li>
+            </ul>
+        </section>
+
+        <!-- Website Design -->
+        <section class="main-section" id="Website_Design">
+            <h3>Website Design</h3>
+            <p>HTML provides the structure of the website.</p>
+            <p>CSS provides colors, spacing, and layout.</p>
+            <code>body { background-color: #FFD23F; }</code>
+            <ul>
+                <li>Yellow is the primary background color.</li>
+                <li>Red is used for headings and text.</li>
+            </ul>
+        </section>
+
+        <!-- Website Features -->
+        <section class="main-section" id="Website_Features">
+            <h3>Website Features</h3>
+            <p>The website includes interactive and informational pages.</p>
+            <p>Visitors can submit forms and explore collections.</p>
+            <code>&lt;main&gt;Page content&lt;/main&gt;</code>
+            <ul>
+                <li>Survey Form</li>
+                <li>Playing Cards</li>
+                <li>Book Inventory</li>
+            </ul>
+        </section>
+
+        <!-- Website Maintenance -->
+        <section class="main-section" id="Website_Maintenance">
+            <h3>Website Maintenance</h3>
+            <p>Update the HTML files when website content changes.</p>
+            <p>Check links, images, validation, and accessibility.</p>
+            <code>&lt;img src="images/mach5.jpeg" alt="Mach 5"&gt;</code>
+            <ul>
+                <li>Use descriptive alternative text.</li>
+                <li>Keep image filenames consistent.</li>
+                <li>Test the site after updates.</li>
+            </ul>
+        </section>
+    </main>
+
+    <figure>
+        <img src="images/mach5.jpeg"
+             alt="Speed Racer Mach 5 race car"
+             width="648" height="365">
+        <figcaption>Speed Racer</figcaption>
+    </figure>
+
+    <!-- Shared website footer -->
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

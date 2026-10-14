@@ -1,92 +1,74 @@
+
+/* General Page Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #FFD23F;
     color: #C8102E;
-    line-height: 1.5;
     max-width: 1200px;
     margin: auto;
+    line-height: 1.5;
 }
 
-h1,
-h2 {
+/* Headings */
+h1, h2, h6 {
     font-family: Georgia, serif;
-    color: #C8102E;
     text-align: center;
 }
 
-h6 {
-    font-family: Georgia, serif;
-    color: #C8102E;
-    font-size: 1.5rem;
-    text-align: center;
-    white-space: nowrap;
-    margin: 20px 0;
-}
-
+/* Header */
 header {
     text-align: center;
 }
 
-header p {
-    text-align: center;
-}
-
+/* Navigation */
 nav {
     text-align: center;
     margin: 20px 0;
 }
 
+/* Main Content */
 main {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-.center {
+/* Centered Content */
+.center, figure, figcaption, blockquote {
     text-align: center;
 }
 
-figure {
-    text-align: center;
+/* Links */
+a, a:link, a:visited {
+    color: #654321;
 }
 
-figcaption {
-    text-align: center;
-    font-style: italic;
+a:hover, a:focus {
+    color: #4A3018;
 }
 
-blockquote {
-    text-align: center;
-}
-
-a {
-    color: #C8102E;
-}
-
-a:visited {
-    color: #C8102E;
-}
-
-a:hover {
-    color: #C8102E;
-}
-
+/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
 }
 
-footer p {
-    text-align: center;
-}
-
+/* Images */
 img {
     max-width: 100%;
     height: auto;
 }
 
-@media (max-width: 600px) {
+/* Documentation */
+#main-doc {
+    text-align: center;
+}
+
+#main-doc .main-section {
+    margin: 25px auto;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
     body {
         max-width: 95%;
-        margin: auto;
     }
 }
