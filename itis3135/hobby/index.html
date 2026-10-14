@@ -1011,13 +1011,23 @@ h3 {
 
     <h3>Build Physical Fitness</h3>
 
-    <figure>
-        <img src="images/fitness.svg"
-             alt="Illustrated runner moving quickly along a track"
-             width="960" height="540">
+ <figure>
+    <img src="images/fitness.svg"
+         alt="Illustrated runner moving quickly along a track"
+         width="960" height="540">
 
-        <figcaption>Build Physical Fitness</figcaption>
-    </figure>
+    <figcaption>
+        Build Physical Fitness
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original dark-and-gold
+                vector illustration of a runner training
+                on a track at sunrise.
+            </em>
+        </p>
+    </figcaption>
+</figure>
 
     <p class="prompt-note">
         <em>
@@ -1046,21 +1056,23 @@ h3 {
 
     <h3>Clear Your Mind</h3>
 
-    <figure>
-        <img src="images/mind.svg"
-             alt="Illustrated sunset over a peaceful city running path"
-             width="960" height="540">
+ <figure>
+    <img src="images/mind.svg"
+         alt="Illustrated sunset over a peaceful city running path"
+         width="960" height="540">
 
-        <figcaption>Clear Your Mind</figcaption>
-    </figure>
+    <figcaption>
+        Clear Your Mind
 
-    <p class="prompt-note">
-        <em>
-            AI prompt: Create a calm vector skyline
-            and running trail at sunset using deep
-            navy and warm gold.
-        </em>
-    </p>
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create a calm vector skyline
+                and running trail at sunset using deep
+                navy and warm gold.
+            </em>
+        </p>
+    </figcaption>
+</figure>
 
     <p>
         A run creates time to think, reset, and step
@@ -1074,13 +1086,23 @@ h3 {
 
     <h3>Set and Achieve Goals</h3>
 
-    <figure>
-        <img src="images/goals.svg"
-             alt="Illustrated athletics track with finish line at sunset"
-             width="960" height="540">
+<figure>
+    <img src="images/goals.svg"
+         alt="Illustrated athletics track with finish line at sunset"
+         width="960" height="540">
 
-        <figcaption>Set and Achieve Goals</figcaption>
-    </figure>
+    <figcaption>
+        Set and Achieve Goals
+
+        <p class="prompt-note">
+            <em>
+                AI prompt: Create an original vector
+                athletics track with a finish line,
+                sunset, and an ambitious racing atmosphere.
+            </em>
+        </p>
+    </figcaption>
+</figure>
 
     <p class="prompt-note">
         <em>
@@ -1972,12 +1994,9 @@ h3 {
 
                 Designed by
 
-                <a href="https://webpages.charlotte.edu/tmason17/itis3135/tonymasondesigns.com/">
-
-                    Tony Mason Designs
-
-                </a>
-
+            <a href="../tonymasondesigns.com/">
+                Tony Mason Designs
+            </a>
             </p>
 
 
@@ -2011,18 +2030,15 @@ h3 {
         // Display only the selected section.
 
         function showPage() {
+    const requested = window.location.hash.substring(1);
+    const selected = validPages.has(requested) ? requested : "what";
 
-            const requested = window.location.hash.substring(1);
+    document.title = "Running | Tony Mason's Hobby | " +
+        document.querySelector(`#${selected} h2`).textContent.trim();
 
-            const selected = validPages.has(requested) ? requested : "what";
-
-
-
-            pages.forEach((page) => {
-
-                page.hidden = page.id !== selected;
-
-            });
+    pages.forEach((page) => {
+        page.hidden = page.id !== selected;
+    });
 
 
 
