@@ -14,860 +14,323 @@
 
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
-
-
     <style>
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
 
-        /* Website Colors */
-
-        :root {
-
-            --background: #06141c;
-
-            --surface: #0c202b;
-
-            --surface-light: #122d3a;
-
-            --text: #f7f5ef;
-
-            --muted: #c5d1d5;
-
-            --gold: #ffc36b;
-
-            --gold-deep: #e7a64e;
-
-            --border: #2a4350;
-
-        }
-
-
-
-        /* General Page Styling */
-
-        * {
-
-            box-sizing: border-box;
-
-        }
-
-
-
-        body {
-    max-width: 100%;
-    margin: auto;
-    background: var(--background);
-    color: var(--text);
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #06141c;
+    color: #f7f5ef;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
-
-
-        /* Links */
-
-        a {
-
-            color: var(--gold);
-
-        }
-
-
-
-        a:hover,
-
-        a:focus-visible {
-
-            color: #ffe0ad;
-
-        }
-
-
-
-        a:focus-visible,
-
-        button:focus-visible {
-
-            outline: 3px solid var(--gold);
-
-            outline-offset: 4px;
-
-        }
-
-
-
-        /* The class attributes organize the hero, navigation,
-
-           cards, and figures. The id attributes connect the
-
-           navigation links to each hobby section. Div elements
-
-           group visual layout, and spans hold decorative symbols. */
-
-
-
-        /* Website Header */
-
-        .site-header {
-
-            background: #081a23;
-
-            border-bottom: 1px solid var(--border);
-
-        }
-
-
-
-        /* Running Hero Banner */
-
-        .hero {
-
-            min-height: 230px;
-
-            background: linear-gradient(
-
-                90deg,
-
-                rgba(2, 12, 18, .91) 0%,
-
-                rgba(2, 12, 18, .62) 45%,
-
-                rgba(2, 12, 18, .1) 100%
-
-            ),
-
-            url("images/hero.svg") center / cover no-repeat;
-
-
-
-            display: flex;
-
-            align-items: center;
-
-            padding: 30px max(5%, calc((100% - 1300px) / 2));
-
-        }
-
-
-
-       /* Paragraphs */
-p {
-    margin-top: 0;
+a {
+    color: #ffc36b;
 }
 
+a:hover, a:focus {
+    color: #ffe0ad;
+}
 
+/* Header and banner */
+.site-header {
+    background-color: #081a23;
+    border-bottom: 1px solid #2a4350;
+}
 
-  
+.hero {
+    background-color: #122d3a;
+    background-image: url("images/hero.svg");
+    background-position: center;
+    background-size: cover;
+    min-height: 220px;
+    padding: 40px 6%;
+}
+
 h1 {
-    margin-top: 0;
-    font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-size: clamp(3.5rem, 10vw, 7.5rem);
-    line-height: 1;
+    margin: 0 0 12px;
+    font-family: Impact, Arial, sans-serif;
+    font-size: 80px;
     font-style: italic;
-    letter-spacing: .045em;
-    margin-bottom: 12px;
-    text-shadow: 0 4px 18px rgba(0, 0, 0, .45);
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px #06141c;
 }
 
-
-
-
-        /* Header Tagline */
-
-        .tagline {
-
-            color: var(--gold);
-
-            font-size: clamp(.8rem, 1.5vw, 1.1rem);
-
-            letter-spacing: .22em;
-
-            font-weight: 700;
-
-            margin-bottom: 0;
-
-        }
-
-
-
-        /* Navigation Menu */
-
-        .site-nav {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            justify-content: center;
-
-            gap: 0;
-
-            max-width: 1300px;
-
-            margin: auto;
-
-        }
-
-
-
-        .nav-link {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 9px;
-
-            padding: 17px 19px;
-
-            color: var(--text);
-
-            text-decoration: none;
-
-            font-weight: 700;
-
-            border-bottom: 3px solid transparent;
-
-            transition: background-color .2s, color .2s;
-
-        }
-
-
-
-.nav-link::after {
-    margin-left: 4px;
+.tagline {
+    margin: 0;
+    color: #ffc36b;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-.nav-link:last-child::after {
-    content: none;
-}
-
-
-
-        /* Active Navigation Link */
-
-        .nav-link:hover,
-
-        .nav-link:focus-visible,
-
-        .nav-link[aria-current="page"] {
-
-            color: var(--gold);
-
-            background: rgba(255, 195, 107, .08);
-
-            border-bottom-color: var(--gold);
-
-        }
-
-
-
-        .nav-icon {
-
-            font-size: 1.2rem;
-
-        }
-
-
-
-        /* Main Content */
-
-        main {
-
-            max-width: 1380px;
-
-            margin: 0 auto;
-
-            padding: 24px 20px 34px;
-
-            min-height: 560px;
-
-        }
-
-
-
-        /* Individual Hobby Sections */
-
-        .page {
-
-            background: linear-gradient(
-
-                145deg,
-
-                rgba(18, 45, 58, .92),
-
-                rgba(6, 20, 28, .97)
-
-            );
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-
-            padding: clamp(22px, 4vw, 46px);
-
-            box-shadow: 0 14px 35px rgba(0, 0, 0, .17);
-
-        }
-
-
-
-        /* Hide Sections That Are Not Selected */
-
-        .page[hidden] {
-
-            display: none;
-
-        }
-
-
-
-        /* Section Divider Symbol */
-
-        .section-symbol {
-
-            color: var(--gold);
-
-            font-size: 2rem;
-
-            text-align: center;
-
-            margin-bottom: 0;
-
-        }
-
-
-
-        /* Section Headings */
-
-      
-h2 {
-    margin-top: 0;
-    font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    letter-spacing: .05em;
-    text-transform: uppercase;
+/* Navigation */
+.site-nav {
     text-align: center;
-    line-height: 1.2;
-    margin-bottom: 15px;
+    padding: 12px;
 }
 
+.nav-link {
+    display: inline-block;
+    padding: 12px;
+    margin: 3px;
+    color: #f7f5ef;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
 
+.nav-link:hover,
+.nav-link:focus,
+.nav-link[aria-current="page"] {
+    color: #ffc36b;
+    background-color: #122d3a;
+    border-bottom-color: #ffc36b;
+}
 
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    min-height: 500px;
+}
 
-        /* Section Introduction */
+.page {
+    padding: 30px;
+    background-color: #0c202b;
+    border: 1px solid #2a4350;
+    border-radius: 12px;
+}
 
-        .intro {
+.page[hidden] {
+    display: none;
+}
 
-            color: var(--muted);
+.section-symbol {
+    color: #ffc36b;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
 
-            max-width: 790px;
+h2 {
+    margin: 0 0 16px;
+    font-family: Impact, Arial, sans-serif;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
-            margin: 0 auto 30px;
-
-            text-align: center;
-
-            font-size: 1.04rem;
-
-        }
-
-
-
-        /* Smaller Headings */
-
-     
 h3 {
-    margin-top: 0;
-    color: var(--gold);
-    font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: .025em;
+    margin: 0 0 10px;
+    color: #ffc36b;
+    font-family: Impact, Arial, sans-serif;
+    font-size: 24px;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 28px;
+    color: #c5d1d5;
+    text-align: center;
+}
+
+/* Three cards */
+
+.feature-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 3%;
+    font-size: 16px;
+    margin-bottom: 16px;
+    background-color: #122d3a;
+    border-radius: 10px;
+}
+
+.feature-card:last-child {
+    margin-right: 0;
+}
+
+.feature-card p,
+.info-block p {
+    color: #c5d1d5;
+}
+
+/* Two-column sections */
+.split-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.split-layout > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+    margin-right: 3%;
+    font-size: 16px;
+}
+
+.split-layout > figure {
+    display: inline-block;
+    vertical-align: top;
+    width: 42%;
+    font-size: 16px;
+}
+
+.info-block {
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #122d3a;
+    border-left: 3px solid #ffc36b;
+}
+
+/* Images and captions */
+figure {
+    margin: 0;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.visual-panel {
+    padding: 14px;
+    background-color: #122d3a;
+    border: 1px solid #2a4350;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #ffc36b;
+    font-weight: bold;
+}
+
+.prompt-note {
+    margin-top: 10px;
+    padding-top: 8px;
+    color: #c5d1d5;
+    font-size: 14px;
+    border-top: 1px solid #2a4350;
+}
+
+/* Lists and running schedule */
+ul, ol {
+    padding-left: 24px;
+}
+
+li {
     margin-bottom: 8px;
 }
 
-
-       
-/* Three Column Layout */
-.feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+.schedule {
+    width: 100%;
+    margin: 16px 0;
+    border-collapse: collapse;
 }
 
-
-
-
-        /* Feature Cards */
-
-        .feature-card {
-
-            min-width: 0;
-
-            background: rgba(4, 16, 23, .58);
-
-            border: 1px solid var(--border);
-
-            border-radius: 12px;
-
-            padding: 14px;
-
-        }
-
-
-
-        /* Figures and Images */
-
-        figure {
-
-            margin: 0;
-
-        }
-
-
-
-        figure img {
-
-            display: block;
-
-            width: 100%;
-
-            height: auto;
-
-            aspect-ratio: 16 / 9;
-
-            object-fit: cover;
-
-            border-radius: 9px;
-
-            background: var(--surface-light);
-
-        }
-
-
-
-        /* Image Captions */
-
-        figcaption {
-
-            color: var(--gold);
-
-            font-size: 1.1rem;
-
-            font-weight: 800;
-
-            margin: 12px 0 8px;
-
-        }
-
-
-
-/* Card Descriptions */
-.feature-card > p,
-.info-block p {
-    color: var(--muted);
+.schedule caption {
+    margin-bottom: 8px;
+    color: #ffc36b;
+    font-weight: bold;
+    text-align: left;
 }
 
-
-        /* AI Image Prompt Descriptions */
-
-        .prompt-note {
-
-            color: #b5c4ca;
-
-            font-size: .86rem;
-
-            border-top: 1px solid var(--border);
-
-            margin-top: 13px;
-
-            padding-top: 10px;
-
-        }
-
-
-/* Two Column Layout */
-.split-layout {
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    align-items: start;
-    gap: 32px;
-    max-width: 1110px;
-    margin: auto;
+.schedule th,
+.schedule td {
+    padding: 8px;
+    border-bottom: 1px solid #2a4350;
+    text-align: left;
 }
 
-
-
-        /* Information Boxes */
-
-        .info-block {
-
-            padding: 18px 20px;
-
-            border-left: 3px solid var(--gold);
-
-            background: rgba(4, 16, 23, .5);
-
-            margin-bottom: 18px;
-
-            border-radius: 0 10px 10px 0;
-
-        }
-
-
-
-        .info-block p:last-child {
-
-            margin-bottom: 0;
-
-        }
-
-
-
-        /* Image Panel */
-
-        .visual-panel {
-
-            background: rgba(4, 16, 23, .55);
-
-            border: 1px solid var(--border);
-
-            padding: 14px;
-
-            border-radius: 12px;
-
-        }
-
-
-
-        /* Lists */
-
-        ul, ol {
-
-            padding-left: 24px;
-
-        }
-
-
-
-        li {
-
-            margin: 7px 0;
-
-        }
-
-
-
-        strong {
-
-            color: #fff1d9;
-
-        }
-
-
-
-        /* Running Schedule Table */
-
-        .schedule {
-
-            width: 100%;
-
-            border-collapse: collapse;
-
-            margin: 12px 0 20px;
-
-            font-size: .94rem;
-
-        }
-
-
-
-        .schedule caption {
-
-            color: var(--gold);
-
-            font-weight: bold;
-
-            text-align: left;
-
-            margin-bottom: 8px;
-
-        }
-
-
-
-        .schedule th,
-
-        .schedule td {
-
-            border-bottom: 1px solid var(--border);
-
-            text-align: left;
-
-            padding: 11px 10px;
-
-        }
-
-
-
-        .schedule th {
-
-            color: var(--gold);
-
-        }
-
-
-
-        /* Website Footer */
-
-        .site-footer {
-
-            border-top: 1px solid var(--border);
-
-            padding: 24px 20px 30px;
-
-            background: #06151d;
-
-            text-align: center;
-
-        }
-
-
-
-        /* Footer Layout */
-
-        .footer-inner {
-
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 24px;
-
-            flex-wrap: wrap;
-
-        }
-
-
-
-        /* Footer Branding */
-
-        .footer-brand {
-
-            text-align: left;
-
-        }
-
-
-
-        .footer-brand strong {
-
-            font-size: 1.12rem;
-
-        }
-
-
-
-        .footer-brand p {
-
-            color: var(--gold);
-
-            font-size: .75rem;
-
-            letter-spacing: .2em;
-
-            margin-bottom: 0;
-
-        }
-
-
-
-        /* Validation Links */
-
-        .validation-links {
-
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-        }
-
-
-
-        .validation-links a {
-
-            display: inline-block;
-
-            padding: 8px 12px;
-
-            background: #173746;
-
-            color: #fff4df;
-
-            border: 1px solid #42616f;
-
-            border-radius: 6px;
-
-            text-decoration: none;
-
-            font-size: .83rem;
-
-            font-weight: bold;
-
-        }
-
-
-
-        .validation-links a:hover {
-
-            background: #315363;
-
-        }
-
-
-
-        /* Design Firm Credit */
-
-        .credit {
-
-            margin-bottom: 0;
-
-            color: var(--muted);
-
-        }
-
-
-
-        /* Tablet Responsiveness */
-
-        @media (max-width: 850px) {
-
-            .feature-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-
-            .split-layout {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-
-            .footer-inner {
-
-                justify-content: center;
-
-            }
-
-
-
-            .footer-brand {
-
-                text-align: center;
-
-            }
-
-        }
-
-
-
-        /* Mobile Responsiveness */
-
-        @media (max-width: 540px) {
-
-            .hero {
-
-                min-height: 195px;
-
-            }
-
-
-
-            .site-nav {
-
-                justify-content: space-around;
-
-            }
-
-
-
-            .nav-link {
-
-                padding: 12px 8px;
-
-                font-size: .88rem;
-
-            }
-
-
-
-            .nav-link:not(:last-child)::after {
-
-                margin-left: 4px;
-
-            }
-
-
-
-            main {
-
-                padding: 14px 10px 25px;
-
-            }
-
-
-
-            .page {
-
-                padding: 22px 16px;
-
-            }
-
-
-
-            .schedule {
-
-                font-size: .8rem;
-
-            }
-
-
-
-            .schedule th,
-
-            .schedule td {
-
-                padding: 8px 5px;
-
-            }
-
-        }
-
-    </style>
-
-    <!-- Course standards and page lint checkers -->
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+/* Footer */
+.site-footer {
+    padding: 24px;
+    background-color: #081a23;
+    border-top: 1px solid #2a4350;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand p {
+    color: #ffc36b;
+    font-size: 13px;
+}
+
+.validation-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    color: #f7f5ef;
+    background-color: #173746;
+    border: 1px solid #42616f;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.validation-links a:hover {
+    background-color: #315363;
+}
+
+.credit {
+    color: #c5d1d5;
+}
+
+/* Smaller screens */
+@media (max-width: 850px) {
+    .feature-card,
+    .split-layout > div,
+    .split-layout > figure {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .page {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .hero {
+        min-height: 170px;
+        padding: 28px 16px;
+    }
+
+    .tagline {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .nav-link {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 12px;
+    }
+}
+</style>
+
+<!-- Course standards and page lint checkers -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
-
 </head>
-
-
 
 <body>
 
@@ -876,8 +339,6 @@ h3 {
          layout, navigation, figures, and cards. The id attributes identify the
 
          seven sections for navigation and JavaScript section switching. -->
-
-
 
     <!-- Website Header -->
 
@@ -890,11 +351,10 @@ h3 {
                 <h1>RUNNING</h1>
 
                     <p class="tagline"><em>DISCIPLINE ✦ PROGRESS ✦ FREEDOM</em></p>
+
             </div>
 
         </div>
-
-
 
         <!-- Hobby Navigation -->
 
@@ -946,13 +406,9 @@ h3 {
 
     </header>
 
-
-
     <!-- Main Website Content -->
 
     <main>
-
-
 
         <!-- What Section: Default Home Page -->
 
@@ -961,8 +417,6 @@ h3 {
             <p class="section-symbol" aria-hidden="true">✦</p>
 
             <h2>What Is Running?</h2>
-
-
 
             <p class="intro">
 
@@ -976,86 +430,102 @@ h3 {
 
             </p>
 
-
-
             <div class="feature-grid">
-
-
 
                 <!-- Physical Fitness Card -->
 
-                
 <article class="feature-card">
 
     <h3>Build Physical Fitness</h3>
 
  <figure>
+
     <img src="images/fitness.svg"
+
          alt="Illustrated runner moving quickly along a track"
+
          width="960" height="540">
 
     <figcaption>
+
         Build Physical Fitness
 
         <p class="prompt-note">
+
             <em>
+
                 AI prompt: Create an original dark-and-gold
+
                 vector illustration of a runner training
+
                 on a track at sunrise.
+
             </em>
+
         </p>
+
     </figcaption>
+
 </figure>
 
-    <p class="prompt-note">
-        <em>
-            AI prompt: Create an original dark-and-gold
-            vector illustration of a runner training
-            on a track at sunrise.
-        </em>
-    </p>
-
     <p>
+
         Running builds endurance, supports heart health,
+
         and strengthens the legs. Consistent training
+
         makes everyday movement and other activities
+
         feel easier.
+
     </p>
 
 </article>
 
-
-
-
                 <!-- Mental Clarity Card -->
 
-                
 <article class="feature-card">
 
     <h3>Clear Your Mind</h3>
 
  <figure>
+
     <img src="images/mind.svg"
+
          alt="Illustrated sunset over a peaceful city running path"
+
          width="960" height="540">
 
     <figcaption>
+
         Clear Your Mind
 
         <p class="prompt-note">
+
             <em>
+
                 AI prompt: Create a calm vector skyline
+
                 and running trail at sunset using deep
+
                 navy and warm gold.
+
             </em>
+
         </p>
+
     </figcaption>
+
 </figure>
 
     <p>
+
         A run creates time to think, reset, and step
+
         away from distractions. Getting outside and
+
         moving can help improve mood and focus.
+
     </p>
 
 </article>
@@ -1065,45 +535,50 @@ h3 {
     <h3>Set and Achieve Goals</h3>
 
 <figure>
+
     <img src="images/goals.svg"
+
          alt="Illustrated athletics track with finish line at sunset"
+
          width="960" height="540">
 
     <figcaption>
+
         Set and Achieve Goals
 
         <p class="prompt-note">
+
             <em>
+
                 AI prompt: Create an original vector
+
                 athletics track with a finish line,
+
                 sunset, and an ambitious racing atmosphere.
+
             </em>
+
         </p>
+
     </figcaption>
+
 </figure>
 
-    <p class="prompt-note">
-        <em>
-            AI prompt: Create an original vector
-            athletics track with a finish line,
-            sunset, and an ambitious racing atmosphere.
-        </em>
-    </p>
-
     <p>
+
         Whether the goal is a faster mile, a longer
+
         distance, or finishing a race, running rewards
+
         consistency, patience, and hard work.
+
     </p>
 
 </article>
 
-
             </div>
 
         </section>
-
-
 
         <!-- Who Section: About Me -->
 
@@ -1113,8 +588,6 @@ h3 {
 
             <h2>Who Is Behind the Miles?</h2>
 
-
-
             <p class="intro">
 
                 This hobby site shares how running fits into my life
@@ -1123,13 +596,9 @@ h3 {
 
             </p>
 
-
-
             <div class="split-layout">
 
                 <div>
-
-
 
                     <!-- Personal Introduction -->
 
@@ -1149,8 +618,6 @@ h3 {
 
                     </div>
 
-
-
                     <!-- Running Approach -->
 
                     <div class="info-block">
@@ -1168,8 +635,6 @@ h3 {
                         </p>
 
                     </div>
-
-
 
                     <!-- Running Motivation -->
 
@@ -1189,39 +654,43 @@ h3 {
 
                     </div>
 
-
-
                 </div>
-
-
 
                 <!-- Who Section Image -->
 
-                
 <figure class="visual-panel">
+
     <img src="images/who.svg"
+
          alt="Illustrated runner on a city path with a glowing skyline"
+
          width="960" height="540">
 
     <figcaption>
+
         A Runner's Journey
 
         <p class="prompt-note">
-            <em>
-                AI prompt: Create an original cinematic
-                vector illustration of a runner on a city
-                path, with a warm sunrise and navy shadows.
-            </em>
-        </p>
-    </figcaption>
-</figure>
 
+            <em>
+
+                AI prompt: Create an original cinematic
+
+                vector illustration of a runner on a city
+
+                path, with a warm sunrise and navy shadows.
+
+            </em>
+
+        </p>
+
+    </figcaption>
+
+</figure>
 
             </div>
 
         </section>
-
-
 
         <!-- When Section: Running Schedule -->
 
@@ -1230,8 +699,6 @@ h3 {
             <p class="section-symbol" aria-hidden="true">✦</p>
 
             <h2>When Is the Best Time to Run?</h2>
-
-
 
             <p class="intro">
 
@@ -1243,13 +710,9 @@ h3 {
 
             </p>
 
-
-
             <div class="split-layout">
 
                 <div>
-
-
 
                     <!-- Best Times to Run -->
 
@@ -1270,8 +733,6 @@ h3 {
                         </p>
 
                     </div>
-
-
 
                     <!-- Example Weekly Running Schedule -->
 
@@ -1329,8 +790,6 @@ h3 {
 
                     </table>
 
-
-
                     <p>
 
                         This is an example, not a fixed training
@@ -1341,39 +800,43 @@ h3 {
 
                     </p>
 
-
-
                 </div>
-
-
 
                 <!-- When Section Image -->
 
-               
 <figure class="visual-panel">
+
     <img src="images/when.svg"
+
          alt="Illustrated sunrise and clock overlooking a running track"
+
          width="960" height="540">
 
     <figcaption>
+
         Make Time for the Miles
 
         <p class="prompt-note">
-            <em>
-                AI prompt: Create a vector illustration
-                of an early morning running track with
-                a stylized clock and golden sunrise.
-            </em>
-        </p>
-    </figcaption>
-</figure>
 
+            <em>
+
+                AI prompt: Create a vector illustration
+
+                of an early morning running track with
+
+                a stylized clock and golden sunrise.
+
+            </em>
+
+        </p>
+
+    </figcaption>
+
+</figure>
 
             </div>
 
         </section>
-
-
 
         <!-- Where Section: Running Locations -->
 
@@ -1382,8 +845,6 @@ h3 {
             <p class="section-symbol" aria-hidden="true">✦</p>
 
             <h2>Where Can You Run?</h2>
-
-
 
             <p class="intro">
 
@@ -1395,13 +856,9 @@ h3 {
 
             </p>
 
-
-
             <div class="split-layout">
 
                 <div>
-
-
 
                     <!-- Running Tracks -->
 
@@ -1420,8 +877,6 @@ h3 {
                         </p>
 
                     </div>
-
-
 
                     <!-- Parks and Trails -->
 
@@ -1443,8 +898,6 @@ h3 {
 
                     </div>
 
-
-
                     <!-- Treadmill Running -->
 
                     <div class="info-block">
@@ -1463,40 +916,45 @@ h3 {
 
                     </div>
 
-
-
                 </div>
-
-
 
                 <!-- Where Section Image -->
 
-                
 <figure class="visual-panel">
+
     <img src="images/where.svg"
+
          alt="Illustrated winding running trail through trees"
+
          width="960" height="540">
 
     <figcaption>
+
         Find Your Running Route
 
         <p class="prompt-note">
-            <em>
-                AI prompt: Create an original vector
-                illustration of a winding running trail
-                in a park with dark green trees and
-                golden light.
-            </em>
-        </p>
-    </figcaption>
-</figure>
 
+            <em>
+
+                AI prompt: Create an original vector
+
+                illustration of a winding running trail
+
+                in a park with dark green trees and
+
+                golden light.
+
+            </em>
+
+        </p>
+
+    </figcaption>
+
+</figure>
 
             </div>
 
         </section>
-
-
 
         <!-- How Section: Getting Started -->
 
@@ -1505,8 +963,6 @@ h3 {
             <p class="section-symbol" aria-hidden="true">✦</p>
 
             <h2>How Do You Start Running?</h2>
-
-
 
             <p class="intro">
 
@@ -1518,21 +974,15 @@ h3 {
 
             </p>
 
-
-
             <div class="split-layout">
 
                 <div>
-
-
 
                     <!-- Running Basics -->
 
                     <div class="info-block">
 
                         <h3>Start with the Basics</h3>
-
-
 
                         <ol>
 
@@ -1576,8 +1026,6 @@ h3 {
 
                     </div>
 
-
-
                     <!-- Tracking Progress -->
 
                     <div class="info-block">
@@ -1598,39 +1046,45 @@ h3 {
 
                     </div>
 
-
-
                 </div>
-
-
 
                 <!-- How Section Image -->
 
-                
 <figure class="visual-panel">
+
     <img src="images/how.svg"
+
          alt="Illustrated running shoes and winding route markings"
+
          width="960" height="540">
 
     <figcaption>
+
         One Step at a Time
 
         <p class="prompt-note">
+
             <em>
+
                 AI prompt: Create an original vector
+
                 illustration of running shoes on a
+
                 track with motion lines and warm
+
                 gold highlights.
+
             </em>
+
         </p>
+
     </figcaption>
+
 </figure>
 
             </div>
 
         </section>
-
-
 
         <!-- Why Section: Personal Motivation -->
 
@@ -1639,8 +1093,6 @@ h3 {
             <p class="section-symbol" aria-hidden="true">✦</p>
 
             <h2>Why Do I Love Running?</h2>
-
-
 
             <p class="intro">
 
@@ -1652,13 +1104,9 @@ h3 {
 
             </p>
 
-
-
             <div class="split-layout">
 
                 <div>
-
-
 
                     <!-- Personal Growth -->
 
@@ -1678,8 +1126,6 @@ h3 {
 
                     </div>
 
-
-
                     <!-- Confidence -->
 
                     <div class="info-block">
@@ -1697,8 +1143,6 @@ h3 {
                         </p>
 
                     </div>
-
-
 
                     <!-- Freedom -->
 
@@ -1718,39 +1162,43 @@ h3 {
 
                     </div>
 
-
-
                 </div>
-
-
 
                 <!-- Why Section Image -->
 
-                
 <figure class="visual-panel">
+
     <img src="images/why.svg"
+
          alt="Illustrated runner crossing a finish line beneath a glowing sky"
+
          width="960" height="540">
 
     <figcaption>
+
         Run Stronger Every Day
 
         <p class="prompt-note">
-            <em>
-                AI prompt: Create an original inspirational
-                vector illustration of a runner crossing
-                a finish line at sunset.
-            </em>
-        </p>
-    </figcaption>
-</figure>
 
+            <em>
+
+                AI prompt: Create an original inspirational
+
+                vector illustration of a runner crossing
+
+                a finish line at sunset.
+
+            </em>
+
+        </p>
+
+    </figcaption>
+
+</figure>
 
             </div>
 
         </section>
-
-
 
         <!-- AI Prompts Section -->
 
@@ -1759,8 +1207,6 @@ h3 {
             <p class="section-symbol" aria-hidden="true">✦</p>
 
             <h2>AI Prompts and Credits</h2>
-
-
 
             <p class="intro">
 
@@ -1772,13 +1218,9 @@ h3 {
 
             </p>
 
-
-
             <div class="split-layout">
 
                 <div>
-
-
 
                     <!-- Website Code Prompt -->
 
@@ -1804,8 +1246,6 @@ h3 {
 
                     </div>
 
-
-
                     <!-- Writing Prompt -->
 
                     <div class="info-block">
@@ -1827,8 +1267,6 @@ h3 {
                         </p>
 
                     </div>
-
-
 
                     <!-- Artwork Prompt -->
 
@@ -1852,8 +1290,6 @@ h3 {
 
                     </div>
 
-
-
                     <p>
 
                         All artwork in the <strong>images</strong>
@@ -1866,51 +1302,53 @@ h3 {
 
                     </p>
 
-
-
                 </div>
-
-
 
                 <!-- AI Prompts Section Image -->
 
-                
 <figure class="visual-panel">
+
     <img src="images/prompts.svg"
+
          alt="Illustrated computer screen showing code beside a running track"
+
          width="960" height="540">
 
     <figcaption>
+
         How This Site Was Created
 
         <p class="prompt-note">
+
             <em>
+
                 AI prompt: Create an original vector
+
                 illustration combining a coding screen
+
                 and a running track in a consistent
+
                 navy-and-gold style.
+
             </em>
+
         </p>
+
     </figcaption>
+
 </figure>
 
             </div>
 
         </section>
 
-
-
     </main>
-
-
 
     <!-- Website Footer -->
 
     <footer class="site-footer">
 
         <div class="footer-inner">
-
-
 
             <!-- Website Branding -->
 
@@ -1921,8 +1359,6 @@ h3 {
                 <p>RUN STRONGER EVERY DAY</p>
 
             </div>
-
-
 
             <!-- Website Validation Links -->
 
@@ -1938,8 +1374,6 @@ h3 {
 
                 </a>
 
-
-
                 <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Ftmason17%2Fitis3135%2Fhobby%2Findex.html"
 
                    target="_blank"
@@ -1949,8 +1383,6 @@ h3 {
                     CSS Validation ↗
 
                 </a>
-
-
 
                 <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/tmason17/itis3135/hobby/"
 
@@ -1964,8 +1396,6 @@ h3 {
 
             </nav>
 
-
-
             <!-- Design Firm Credit -->
 
             <p class="credit">
@@ -1973,17 +1403,16 @@ h3 {
                 Designed by
 
             <a href="../tonymasondesigns.com/">
+
                 Tony Mason Designs
+
             </a>
+
             </p>
-
-
 
         </div>
 
     </footer>
-
-
 
     <!-- JavaScript for Hobby Navigation -->
 
@@ -1995,30 +1424,29 @@ h3 {
 
         const links = document.querySelectorAll(".nav-link");
 
-
-
         const validPages = new Set(
 
             Array.from(pages, (page) => page.id)
 
         );
 
-
-
         // Display only the selected section.
 
         function showPage() {
+
     const requested = window.location.hash.substring(1);
+
     const selected = validPages.has(requested) ? requested : "what";
 
     document.title = "Running | Tony Mason's Hobby | " +
+
         document.querySelector(`#${selected} h2`).textContent.trim();
 
     pages.forEach((page) => {
+
         page.hidden = page.id !== selected;
+
     });
-
-
 
             // Highlight the selected navigation link.
 
@@ -2038,13 +1466,9 @@ h3 {
 
         }
 
-
-
         // Update the displayed section when navigation changes.
 
         window.addEventListener("hashchange", showPage);
-
-
 
         // Show the What section when the website first loads.
 
@@ -2052,6 +1476,7 @@ h3 {
 
     </script>
 
-</body>
 
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
 </html>
