@@ -36,7 +36,9 @@ nav {
 /* Main Content */
 main {
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Center Welcome Paragraph */
@@ -100,4 +102,12 @@ table {
 th, td {
     padding: 10px 15px;
     text-align: center;
+}
+
+/* Prevent Long Content From Overflowing */
+main th,
+main td,
+main p,
+h3 {
+    overflow-wrap: break-word;
 }
