@@ -111,3 +111,54 @@ main p,
 h3 {
     overflow-wrap: break-word;
 }
+
+
+/* Speed Racer Playing Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.racing-card {
+    margin: 0;
+    text-align: center;
+}
+
+.racing-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Mach Cars - Top Row */
+.racing-card:nth-child(4) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.racing-card:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.racing-card:nth-child(6) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* Remaining Cars - Bottom Row */
+.racing-card:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.racing-card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.racing-card:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+}
