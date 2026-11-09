@@ -1,4 +1,228 @@
-<p>
-    Page designed by
-    <a href="tonymasondesigns.com/">Tony Mason Designs</a>
-</p>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tony Mason's Timeless Monkey | ITIS3135 | Introduction Form</title>
+
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/default.css">
+
+    <style>
+    body {
+        max-width: 1200px;
+        width: 90%;
+        margin: auto;
+    }
+
+    h6 {
+        font-size: 40px;
+        white-space: nowrap;
+    }
+
+    /* Center the form and give it a clean layout */
+    #form-area {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: #FFF0B8;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+    /* Improve spacing between labels */
+    form label {
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+
+    /* Make inputs larger and easier to read */
+    form input,
+    form textarea {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        border: 1px solid #810E1E;
+        border-radius: 6px;
+        background-color: #b89b65;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    /* Give text areas more room */
+    form textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    /* Style buttons */
+    form button {
+        margin: 15px 8px 10px 0;
+        padding: 10px 18px;
+        background-color: #810E1E;
+        color: #FFF0B8;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    form button:hover {
+        background-color: #5e0a16;
+    }
+
+    /* Separate each course */
+    .course {
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #FFF0B8;
+        border-radius: 8px;
+    }
+
+    /* Keep the picture centered */
+    main > img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+
+    <!-- Vicunadator -->
+    <script
+        src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
+        defer>
+    </script>
+
+    <!-- Accumulus - last item in head -->
+    <script
+        src="https://lint.page/kit/4d0fe3.js"
+        crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+
+    <!-- Divs are used to load the shared header and footer and organize the form and results. -->
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Introduction Form</h2>
+        <img src="images/your-photo.jpg" alt="Tony Mason" width="400" height="500">
+
+        <!-- IDs identify form fields and buttons for JavaScript, while classes are used for styling course sections. -->
+        <div id="form-area">
+            <h3>Please Submit the Form Below.</h3>
+
+            <form id="introduction-form">
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" value="Tony" placeholder="First name" required>
+
+                <label for="middleName">Middle Name (Optional):</label>
+                <input type="text" id="middleName" placeholder="Middle name">
+
+                <label for="nickname">Nickname (Optional):</label>
+                <input type="text" id="nickname" placeholder="Nickname">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" value="Mason" placeholder="Last name" required>
+
+                <label for="acknowledgment">Acknowledgment:</label>
+                <textarea id="acknowledgment" required>I understand that this is a public document, and I will not include information I do not want others to see.</textarea>
+
+                <label for="acknowledgmentDate">Acknowledgment Date:</label>
+                <input type="text" id="acknowledgmentDate" placeholder="MM/DD/YYYY" required>
+
+                <label for="adjective">Mascot Adjective:</label>
+                <input type="text" id="adjective" value="Timeless" required>
+
+                <label for="animal">Mascot Animal:</label>
+                <input type="text" id="animal" value="Monkey" required>
+
+                <label for="divider">Name Divider:</label>
+                <input type="text" id="divider" value="|" required>
+
+                <label for="picture">Upload Picture (Optional):</label>
+                <input type="file" id="picture" accept="image/*">
+
+                <label for="caption">Picture Caption:</label>
+                <input type="text" id="caption" value="It was only 4 years ago!!" required>
+
+                <label for="statement">Personal Statement:</label>
+                <textarea id="statement" required>My name is Tony, and I am a senior Computer Science major. Along with being a Computer Science major, I joined AFROTC, which is why you will probably see me in uniform in class. I love working out and hanging out with friends, so you might see me around campus.</textarea>
+
+                <label for="personal">Personal Background:</label>
+                <textarea id="personal" required>I am from Charlotte, NC, born and raised.</textarea>
+
+                <label for="professional">Professional Background:</label>
+                <textarea id="professional" required>I currently work at a YMCA as an afterschool counselor.</textarea>
+
+                <label for="academic">Academic Background:</label>
+                <textarea id="academic" required>Senior Computer Science major, graduating in 2027.</textarea>
+
+                <label for="computer">Primary Work Computer:</label>
+                <textarea id="computer" required>Lenovo laptop, Windows 11, version 10.0.26200 Build 26200.</textarea>
+
+                <label for="location">Primary Work Location:</label>
+                <textarea id="location" required>At home.</textarea>
+
+                <label for="alternate">Alternate Computer &amp; Location:</label>
+                <textarea id="alternate" required>I have a backup laptop and would work at my grandparents' house.</textarea>
+
+                <h3>Courses I'm Taking, &amp; Why</h3>
+
+                <div id="courses"></div>
+
+                <button type="button" id="add-course">Add Course</button>
+
+                <label for="quote">Quote:</label>
+                <input type="text" id="quote" value="There is no tomorrow!" required>
+
+                <label for="quoteAuthor">Quote Author:</label>
+                <input type="text" id="quoteAuthor" value="Apollo Creed" required>
+
+                <label for="funny">Funny Thing (Optional):</label>
+                <textarea id="funny" placeholder="Something funny about yourself"></textarea>
+
+                <label for="share">Something to Share (Optional):</label>
+                <textarea id="share" placeholder="Something you would like to share"></textarea>
+
+                <h3>Footer Links</h3>
+
+                <div id="footer-links"></div>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clear">Clear</button>
+                <button type="button" id="generate-html">Generate HTML</button>
+                <button type="button" id="generate-json">Generate JSON</button>
+                <button type="button" id="generate-xml">Generate XML</button>
+
+            </form>
+        </div>
+
+        <div id="result"></div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+
+
+
+</body>
+</html>
