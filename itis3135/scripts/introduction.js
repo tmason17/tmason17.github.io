@@ -275,3 +275,191 @@ form.addEventListener("submit", (event) => {
     formArea.hidden = true;
     window.scrollTo(0, 0);
 });
+
+
+/* Generate HTML, JSON, and XML from the introduction form */
+
+function getFormData() {
+    const courseData = [];
+
+    courses.querySelectorAll(".course").forEach((course) => {
+        const fields = course.querySelectorAll("input");
+
+        courseData.push({
+            department: fields[0].value,
+            number: fields[1].value,
+            title: fields[2].value,
+            reason: fields[3].value
+        });
+    });
+
+    const linkData = [];
+    const linkInputs = footerLinks.querySelectorAll("input");
+
+    for (let i = 0; i < linkInputs.length; i += 2) {
+        linkData.push({
+            name: linkInputs[i].value,
+            url: linkInputs[i + 1].value
+        });
+    }
+
+    return {
+        firstName: getValue("firstName"),
+        middleName: getValue("middleName"),
+        nickname: getValue("nickname"),
+        lastName: getValue("lastName"),
+        acknowledgment: getValue("acknowledgment"),
+        acknowledgmentDate: getValue("acknowledgmentDate"),
+        adjective: getValue("adjective"),
+        animal: getValue("animal"),
+        divider: getValue("divider"),
+        picture: document.getElementById("picture").files[0] ? document.getElementById("picture").files[0].name : "images/your-photo.jpg",
+        caption: getValue("caption"),
+        statement: getValue("statement"),
+        personalBackground: getValue("personal"),
+        professionalBackground: getValue("professional"),
+        academicBackground: getValue("academic"),
+        primaryComputer: getValue("computer"),
+        primaryLocation: getValue("location"),
+        alternateComputer: getValue("alternate"),
+        courses: courseData,
+        quote: getValue("quote"),
+        quoteAuthor: getValue("quoteAuthor"),
+        funny: getValue("funny"),
+        share: getValue("share"),
+        links: linkData
+    };
+}
+
+function showGeneratedCode(code) {
+    let output = document.getElementById("generated-code");
+
+    if (!output) {
+        output = document.createElement("textarea");
+        output.id = "generated-code";
+        output.readOnly = true;
+        output.rows = 20;
+        output.style.width = "100%";
+        output.style.boxSizing = "border-box";
+        output.style.marginTop = "20px";
+
+        form.appendChild(output);
+    }
+
+    output.value = code;
+    output.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, (character) => {
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        };
+
+        return entities[character];
+    });
+}
+
+function generateHTML(data) {
+    const name = [
+        data.firstName,
+        data.middleName,
+        data.nickname,
+        data.lastName
+    ].filter(Boolean).join(" ");
+
+    const courseHTML = data.courses.map((course) =>
+        `            <li><strong>${escapeHTML(course.department)}${escapeHTML(course.number)} - ${escapeHTML(course.title)}:</strong> ${escapeHTML(course.reason)}</li>`
+    ).join("\n");
+
+    const linkHTML = data.links.map((link) =>
+        `        <li><a href="${escapeHTML(link.url)}">${escapeHTML(link.name)}</a></li>`
+    ).join("\n");
+
+    const bullets = [
+        ["Personal Background", data.personalBackground],
+        ["Professional Background", data.professionalBackground],
+        ["Academic Background", data.academicBackground],
+        ["Primary Work Computer", data.primaryComputer],
+        ["Primary Work Location", data.primaryLocation],
+        ["Alternate Computer & Location", data.alternateComputer]
+    ].map(([heading, value]) =>
+        `        <li><strong>${escapeHTML(heading)}:</strong> ${escapeHTML(value)}</li>`
+    ).join("\n");
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <main>
+        <h2>Introduction</h2>
+        <h6>${escapeHTML(name)} ${escapeHTML(data.divider)} ${escapeHTML(data.adjective)} ${escapeHTML(data.animal)}</h6>
+        <figure>
+            <img src="${escapeHTML(data.picture)}" alt="${escapeHTML(name)}" width="400" height="500">
+            <figcaption>${escapeHTML(data.caption)}</figcaption>
+        </figure>
+        <p>${escapeHTML(data.statement)}</p>
+        <ul>
+${bullets}
+        <li><strong>Courses I'm Taking, &amp; Why:</strong>
+            <ol>
+${courseHTML}
+            </ol>
+        </li>
+        </ul>
+        <blockquote>${escapeHTML(data.quote)}<br><em>- ${escapeHTML(data.quoteAuthor)}</em></blockquote>
+${data.funny ? `        <p>Funny Thing: ${escapeHTML(data.funny)}</p>\n` : ""}${data.share ? `        <p>Something to Share: ${escapeHTML(data.share)}</p>\n` : ""}        <h3>Links</h3>
+        <ul>
+${linkHTML}
+        </ul>
+        <p>${escapeHTML(data.acknowledgment)} ${escapeHTML(data.acknowledgmentDate)}</p>
+    </main>
+</body>
+</html>`;
+}
+
+function generateXML(data) {
+    function toXML(key, value, indent = "") {
+        if (Array.isArray(value)) {
+            const itemName = key === "courses" ? "course" : "link";
+
+            return `${indent}<${key}>\n` +
+                value.map((item) => toXML(itemName, item, indent + "    ")).join("\n") +
+                `\n${indent}</${key}>`;
+        }
+
+        if (typeof value === "object" && value !== null) {
+            return `${indent}<${key}>\n` +
+                Object.entries(value).map(([name, item]) =>
+                    toXML(name, item, indent + "    ")
+                ).join("\n") +
+                `\n${indent}</${key}>`;
+        }
+
+        return `${indent}<${key}>${escapeHTML(value)}</${key}>`;
+    }
+
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' +
+        toXML("introduction", data);
+}
+
+document.getElementById("generate-html").addEventListener("click", () => {
+    showGeneratedCode(generateHTML(getFormData()));
+});
+
+document.getElementById("generate-json").addEventListener("click", () => {
+    showGeneratedCode(JSON.stringify(getFormData(), null, 4));
+});
+
+document.getElementById("generate-xml").addEventListener("click", () => {
+    showGeneratedCode(generateXML(getFormData()));
+});
