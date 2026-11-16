@@ -30,7 +30,6 @@ function addCourse(data = ["", "", "", ""]) {
 
     labels.forEach((label, index) => {
         const fieldLabel = document.createElement("label");
-        fieldLabel.textContent = label + ":";
 
         const input = document.createElement("input");
         input.type = "text";
@@ -38,8 +37,11 @@ function addCourse(data = ["", "", "", ""]) {
         input.placeholder = label;
         input.required = true;
 
+        // Connect each label to its input
+        fieldLabel.textContent = label + ":";
+        fieldLabel.appendChild(input);
+
         course.appendChild(fieldLabel);
-        course.appendChild(input);
     });
 
     const remove = document.createElement("button");
@@ -68,6 +70,9 @@ function loadLinks() {
         name.value = link[0];
         name.required = true;
 
+        // Connect the name input to its label
+        label.appendChild(name);
+
         const urlLabel = document.createElement("label");
         urlLabel.textContent = "Link " + (index + 1) + " URL:";
 
@@ -77,7 +82,10 @@ function loadLinks() {
         url.placeholder = "https://example.com";
         url.required = true;
 
-        footerLinks.append(label, name, urlLabel, url);
+        // Connect the URL input to its label
+        urlLabel.appendChild(url);
+
+        footerLinks.append(label, urlLabel);
     });
 }
 
