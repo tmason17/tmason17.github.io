@@ -287,6 +287,7 @@ form.addEventListener("submit", (event) => {
 
 /* Generate HTML, JSON, and XML from the introduction form */
 
+
 function getFormData() {
     const courseData = [];
 
@@ -318,15 +319,17 @@ function getFormData() {
         lastName: getValue("lastName"),
         acknowledgment: getValue("acknowledgment"),
         acknowledgmentDate: getValue("acknowledgmentDate"),
-        adjective: getValue("adjective"),
+        adjectives: getValue("adjective"),
         animal: getValue("animal"),
-        divider: getValue("divider"),
-        picture: document.getElementById("picture").files[0] ? document.getElementById("picture").files[0].name : "images/your-photo.jpg",
+        prettyNameDivider: getValue("divider"),
+        img: document.getElementById("picture").files[0] ? document.getElementById("picture").files[0].name : "images/your-photo.jpg",
         caption: getValue("caption"),
         statement: getValue("statement"),
-        personalBackground: getValue("personal"),
-        professionalBackground: getValue("professional"),
-        academicBackground: getValue("academic"),
+        personalInfo: {
+            personalBackground: getValue("personal"),
+            professionalBackground: getValue("professional"),
+            academicBackground: getValue("academic")
+        },
         primaryComputer: getValue("computer"),
         primaryLocation: getValue("location"),
         alternateComputer: getValue("alternate"),
@@ -338,6 +341,7 @@ function getFormData() {
         links: linkData
     };
 }
+
 
 function showGeneratedCode(code) {
     let output = document.getElementById("generated-code");
@@ -372,6 +376,7 @@ function escapeHTML(value) {
     });
 }
 
+
 function generateHTML(data) {
     const name = [
         data.firstName,
@@ -389,9 +394,9 @@ function generateHTML(data) {
     ).join("\n");
 
     const bullets = [
-        ["Personal Background", data.personalBackground],
-        ["Professional Background", data.professionalBackground],
-        ["Academic Background", data.academicBackground],
+        ["Personal Background", data.personalInfo.personalBackground],
+        ["Professional Background", data.personalInfo.professionalBackground],
+        ["Academic Background", data.personalInfo.academicBackground],
         ["Primary Work Computer", data.primaryComputer],
         ["Primary Work Location", data.primaryLocation],
         ["Alternate Computer & Location", data.alternateComputer]
@@ -410,9 +415,9 @@ function generateHTML(data) {
 <body>
     <main>
         <h2>Introduction</h2>
-        <h6>${escapeHTML(name)} ${escapeHTML(data.divider)} ${escapeHTML(data.adjective)} ${escapeHTML(data.animal)}</h6>
+        <h6>${escapeHTML(name)} ${escapeHTML(data.prettyNameDivider)} ${escapeHTML(data.adjectives)} ${escapeHTML(data.animal)}</h6>
         <figure>
-            <img src="${escapeHTML(data.picture)}" alt="${escapeHTML(name)}" width="400" height="500">
+            <img src="${escapeHTML(data.img)}" alt="${escapeHTML(name)}" width="400" height="500">
             <figcaption>${escapeHTML(data.caption)}</figcaption>
         </figure>
         <p>${escapeHTML(data.statement)}</p>
@@ -434,6 +439,7 @@ ${linkHTML}
 </body>
 </html>`;
 }
+
 
 function generateXML(data) {
     function toXML(key, value, indent = "") {

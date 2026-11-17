@@ -1,0 +1,86 @@
+{
+    "firstName": "Tony",
+    "middleName": "",
+    "nickname": "",
+    "lastName": "Mason",
+    "acknowledgment": "I understand that this is a public document, and I will not include information I do not want others to see.",
+    "acknowledgmentDate": "",
+    "adjectives": "Timeless",
+    "animal": "Monkey",
+    "prettyNameDivider": "|",
+    "img": "images/your-photo.jpg",
+    "caption": "It was only 4 years ago!!",
+    "statement": "My name is Tony, and I am a senior Computer Science major. Along with being a Computer Science major, I joined AFROTC, which is why you will probably see me in uniform in class. I love working out and hanging out with friends, so you might see me around campus.",
+    "personalInfo": {
+        "personalBackground": "I am from Charlotte, NC, born and raised.",
+        "professionalBackground": "I currently work at a YMCA as an afterschool counselor.",
+        "academicBackground": "Senior Computer Science major, graduating in 2027."
+    },
+    "primaryComputer": "Lenovo laptop, Windows 11, version 10.0.26200 Build 26200.",
+    "primaryLocation": "At home.",
+    "alternateComputer": "I have a backup laptop and would work at my grandparents' house.",
+    "courses": [
+        {
+            "department": "AERO",
+            "number": "4101",
+            "title": "Aerospace Studies",
+            "reason": "Required AFROTC class for my minor and commissioning as an officer in the military."
+        },
+        {
+            "department": "ITCS",
+            "number": "4145",
+            "title": "Parallel Programming",
+            "reason": "Required class to graduate and for my concentration elective."
+        },
+        {
+            "department": "ITIS",
+            "number": "3135",
+            "title": "Front End Web App Development",
+            "reason": "Elective I chose due to familiarity with HTML."
+        },
+        {
+            "department": "ITCS",
+            "number": "2610",
+            "title": "Computing Leadership Development",
+            "reason": "Class required to continue my scholarship in school."
+        },
+        {
+            "department": "AERO",
+            "number": "1100",
+            "title": "Leadership Laboratory",
+            "reason": "A required class for AFROTC."
+        },
+        {
+            "department": "STAT",
+            "number": "2122",
+            "title": "Intro to Probability and Statistics",
+            "reason": "A required class to graduate."
+        }
+    ],
+    "quote": "There is no tomorrow!",
+    "quoteAuthor": "Apollo Creed",
+    "funny": "",
+    "share": "",
+    "links": [
+        {
+            "name": "Charlotte Web",
+            "url": ""
+        },
+        {
+            "name": "GitHub.io",
+            "url": ""
+        },
+        {
+            "name": "GitHub",
+            "url": ""
+        },
+        {
+            "name": "freeCodeCamp",
+            "url": ""
+        },
+        {
+            "name": "LinkedIn",
+            "url": ""
+        }
+    ]
+}
